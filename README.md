@@ -1,2 +1,3 @@
 # firstreaction
-first reaction
+
+Custom built Wordpress theme
