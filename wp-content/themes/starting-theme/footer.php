@@ -11,20 +11,103 @@
 
 ?>
 
-	</div><!-- #content -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+			</div><!-- #content -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'starting-theme' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'starting-theme' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'starting-theme' ), 'starting-theme', '<a href="https://automattic.com/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+			<footer>
+				<div class="container-fluid footer">
+					<div class="row about">
+						<hr />
+						<div class="col-sm-5">
+							<h5>We care about the things you care about..</h5>
+							<p class="footer__description">
+								Fxercit ationem ullam corporis suscipit labor iosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in lit esse. Duam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatu.
+							</p>
+						</div><!-- /.col-md-4 -->
+						<div class="col-sm-3 col-sm-offset-4 col-lg-1 col-lg-offset-6 branding hidden-xs">
+							<a href="/"><img src="<?php echo get_template_directory_uri(); ?>/images/favicon.png" alt="<?php echo get_bloginfo();?>"></a>
+						</div><!-- /.col-md-2 col-md-offset-6 -->
+						<hr />
+					</div><!-- /.row -->
 
-<?php wp_footer(); ?>
+					<div class="row">
+						<div class="col-md-7">
+							<!-- <div class="row"> -->
+								<div class="footer__nav">
+									<h6>Shop</h6>
+									<?php wp_nav_menu( array(
+										'theme_location' => 'footer-1' ) );
+										?>
+								</div>
+								<div class="footer__nav">
+									<h6>Product Info</h6>
+									<p>Find out more information about our products and how they work.</p>
+								</div>
+								<div class="footer__nav">
+									<h6>News</h6>
+									<p>Stay up to date with us and whats new.</p>
+								</div>
+								<div class="footer__nav">
+									<h6>About</h6>
+									<p>Find out how we started and what inspires us.</p>
+								</div>
+								<div class="footer__nav">
+									<h6>Get a quote</h6>
+									<p>Have a big project… give us the details for a real quote.</p>
+								</div>
+								<div class="footer__nav">
+									<h6>Contact</h6>
+									<p>Have more questions…let us help you.</p>
+								</div>
+								<div class="footer__nav">
+									<h6>Social</h6>
+									<a href="https://facebook.com"  target="_blank">
+									<img src="<?php echo get_template_directory_uri(); ?>/images/fb_footer.svg" alt="Follow us First Reaction on Facebook">
+									</a>
+									<a href="https://twitter.com"  target="_blank">
+									<img src="<?php echo get_template_directory_uri(); ?>/images/twitter_footer.svg" alt="Follow us First Reaction on Twitter">
+									</a>
+								</div>
+							<!-- </div> -->
+						</div><!-- /.col-md-7 -->
+						<div class="col-md-1 col-md-offset-4 footer__basket">
+							<h6>Basket</h6>
+							<?php if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
 
-</body>
+							    $count = WC()->cart->cart_contents_count;
+							    ?><a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php
+							    if ( $count > 0 ) {
+							        ?>
+							        <span class="cart-contents-count"><?php echo esc_html( $count ); ?></span>
+							        <?php
+							    }
+							        ?></a>
 
+							<?php } ?>
+						</div><!-- /.col-md-2 col-md-offset-6 -->
+					</div><!-- /.row -->
+
+				</div><!-- /.container-fluid -->
+				<div class="container-fluid signature">
+					<div class="row">
+						<div class="col-md-3 byline">
+							Website by <a href="https://cornellstudios.com" target="_blank">Cornell</a>
+						</div><!-- /.col-md-3 -->
+						<div class="col-md-6 copyright">
+							Copyright <?php echo date('Y'); ?> © FIRST REACTION
+						</div><!-- /.col-md-6 -->
+						<div class="col-md-3 policy">
+							<ul>
+								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="#">Cookies</a></li>
+							</ul>
+						</div><!-- /.col-md-3 -->
+					</div><!-- /.row -->
+				</div><!-- /.container-fluid -->
+			</footer><!-- /footer -->
+		</div><!-- #page -->
+
+		<?php wp_footer(); ?>
+
+	</body>
 </html>
