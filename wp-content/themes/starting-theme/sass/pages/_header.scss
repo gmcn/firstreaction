@@ -15,3 +15,64 @@ ul.nav li.menu-item-has-children:hover > ul.dropdown-menu {
     display: block !important;
   }
 }
+
+header {
+  .site-branding {
+    h1 {
+      margin: 0;
+    }
+  }
+  .shop {
+    padding: 10px;
+    img {
+      float: left;
+      height: 30px;
+      padding-right: 10px;
+    }
+    .cart-contents {
+      position: relative;
+      float: right;
+    }
+    .cart-contents:before {
+      content: url(images/basket_header.svg);
+      margin-top:10px;
+      font-style:normal;
+      font-weight:400;
+      // padding-right:5px;
+      vertical-align: bottom;
+  }
+  .cart-contents:hover {
+      text-decoration: none;
+  }
+  .cart-contents-count {
+      color: #000;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      bottom: 4px;
+      text-align: center;
+      // font-weight: bold;
+      // border-radius: 10px;
+      // padding: 1px 6px;
+      // vertical-align: top;
+    }
+  }
+  .navbar-shop {
+    float: left;
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .navbar-default {
+    background: url(images/navbar_before.png) rgba($color__red, .95) no-repeat;
+    li > a {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+  }
+}
