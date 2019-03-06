@@ -182,7 +182,6 @@ function cf_search_join( $join ) {
     return $join;
 }
 add_filter('posts_join', 'cf_search_join' );
-
 /**
  * Modify the search query with posts_where
  * http://codex.wordpress.org/Plugin_API/Filter_Reference/posts_where
@@ -197,6 +196,18 @@ function cf_search_where( $where ) {
     return $where;
 }
 add_filter( 'posts_where', 'cf_search_where' );
+/**
+ * Prevent duplicates
+ * http://codex.wordpress.org/Plugin_API/Filter_Reference/posts_distinct
+ */
+function cf_search_distinct( $where ) {
+    global $wpdb;
+    if ( is_search() ) {
+        return "DISTINCT";
+    }
+    return $where;
+}
+add_filter( 'posts_distinct', 'cf_search_distinct' );
 
 /**
  * Code to add the custom login css file to the theme
