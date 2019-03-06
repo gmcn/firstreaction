@@ -1,0 +1,363 @@
+.bxslider {
+  .bx-wrapper {
+    height: 100vh;
+  }
+}
+
+.slide {
+  h1 {
+    color: #fff;
+    background: $color__red;
+    padding: 30px 20px;
+    display: inline-block;
+    // line-height: 2em;
+    font-size: 32px;
+    font-weight: 700;
+    @include md {
+      font-size: 43px;
+      max-width: 45%;
+    }
+    @include lg {
+      font-size: 54px;
+    }
+  }
+  a {
+    color: #fff;
+    background: $color__red;
+    padding: 10px 20px;
+    display: inline-block;
+    // line-height: 2em;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  a:hover {
+    color: #fff;
+    background-color: $color__green;
+  }
+  .container-fluid {
+    height: 100%;
+    text-align: center;
+  }
+  .vert-align {
+    position: absolute;
+    top: 50%;
+    width: calc(100% - 30px);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .slide-project__title {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    span {
+      color: #fff;
+      margin-right: 50px;
+      float: left;
+    }
+    a {
+      font-weight: 700;
+    }
+  }
+}
+
+.main-products {
+  border-top: 10px solid $color__red;
+  text-align: center;
+  h2 {
+    margin-top: 0;
+    a {
+      color: $color__red;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    a:hover {
+      color: $color__green;
+    }
+    &::before {
+      content: "";
+      position: relative;
+      left: 0;
+      right: 0;
+      margin-left: 50%;
+      margin-right: 50%;
+      height: 50px;
+      width: 10px;
+      display: block;
+      text-align: center;
+      clear: both;
+      background-color: $color__red;
+    }
+  }
+  img.seperator {
+    margin-bottom: 25px;
+    margin-top: 25px
+  }
+  img.product {
+    display: inline-block;
+  }
+}
+
+.moto {
+  border-top: 10px solid $color__red;
+  height: 600px;
+  overflow: hidden;
+  .row, .col-md-6 {
+    height: 100%;
+  }
+  .vert-align {
+    position: absolute;
+    top: 50%;
+    width: calc(100% - 30px);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .copy {
+    background: $color__red;
+    h3 {
+      color: #fff;
+      font-size: 54px;
+      font-weight: 700;
+      @include md {
+        text-align: right;
+        padding-right: 100px
+      }
+    }
+    &:before {
+      position: relative;
+      height: 600px;
+      width: 310px;
+      margin-left: -325px;
+      content: url(images/moto_before.svg);
+    }
+    a {
+      text-align: right;
+      color: #fff;
+      display: block;
+      padding-right: 100px;
+      font-weight: 600;
+    }
+    a:hover {
+      color: #000;
+    }
+  }
+}
+
+.intro {
+  text-align: center;
+  padding: 50px 0;
+  @include md {
+    padding: 100px 0;
+  }
+  @include lg {
+    padding: 200px 0;
+  }
+  h1 {
+    font-weight: 700;
+    font-size: 44px;
+    margin-bottom: 30px;
+    @include md {
+      font-size: 54px;
+      margin-bottom: 75px;
+    }
+  }
+  p {
+
+    font-weight: 300;
+  }
+  p:first-of-type {
+    font-size: 25px;
+  }
+}
+
+.testimonials {
+  border-top: 10px solid $color__green;
+  background: rgba($color__green, .9);
+  color: #fff;
+  padding: 25px 0;
+  @include md {
+    padding: 80px 0;
+  }
+  h1 {
+    text-align: center;
+    color: rgba(0,0,0,.4);
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+  }
+  .testimonial {
+    padding: 0 25px;
+    margin-bottom: 50px;
+    @include md {
+      border-bottom: none;
+      border-right: 1px solid #fff;
+      padding: 0 50px;
+      margin-bottom: 0;
+    }
+    @include lg {
+      border-right: 1px solid #fff;
+      padding: 0 100px;
+    }
+    &:last-of-type {
+      border-right: none;
+    }
+    img {
+      margin-top: 15px;
+      margin-bottom: 25px;
+    }
+    p {
+      font-size: 22px;
+      color: #fff;
+      @include md {
+        margin-bottom: 35px;
+      }
+      @include lg {
+        margin-bottom: 50px;
+      }
+      margin-bottom: 25px;
+      font-weight: 600;
+    }
+    span {
+      color: rgba(0,0,0,.4);
+      font-weight: 700;
+    }
+  }
+}
+
+.call-1, .call-2 {
+  overflow: hidden;
+  border-top: 10px solid #fff;
+  height: 300px;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  .top {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 700;
+    top: -50%;
+    font-size: 225px;
+    color: rgba(0, 0, 0, .3);
+  }
+  .bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 700;
+    bottom: -50%;
+    font-size: 225px;
+    color: rgba(0, 0, 0, .3);
+  }
+  h3 {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 5px;
+  a {
+    color: #fff;
+    font-weight: 600;
+  }
+  a:hover {
+    color: #000;
+  }
+  .vert-align {
+    position: absolute;
+    top: 50%;
+    width: calc(100% - 30px);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 999;
+  }
+}
+
+.sub-products {
+  text-align: center;
+  padding-bottom: 50px;
+  h2 {
+    margin-top: 0;
+    a {
+      color: $color__green;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    a:hover {
+      color: $color__red;
+    }
+    &::before {
+      content: "";
+      position: relative;
+      left: 0;
+      right: 0;
+      margin-left: 50%;
+      margin-right: 50%;
+      height: 50px;
+      width: 10px;
+      display: block;
+      text-align: center;
+      clear: both;
+      background-color: $color__green;
+    }
+  }
+  .add_to_cart_button {
+    margin-top: 25px;
+    color: #fff;
+    background: #B5B5B5;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .add_to_cart_button:hover {
+    background: $color__green;
+  }
+  .added_to_cart {
+    margin-top: 25px;
+    color: #fff;
+    background: $color__green;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .added_to_cart:hover {
+    background: #B5B5B5;
+  }
+  img.product {
+    display: inline-block;
+  }
+  a.more {
+    margin-top: 25px;
+    color: #fff;
+    background: $color__green;
+    padding: 15px 50px;
+    border-radius: 5px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  a.more:hover {
+    background: #B5B5B5;
+    color: #fff;
+  }
+}
