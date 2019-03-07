@@ -67,6 +67,7 @@
 .main-products {
   border-top: 10px solid $color__red;
   text-align: center;
+  padding-bottom: 50px;
   h2 {
     margin-top: 0;
     a {
@@ -98,6 +99,20 @@
   }
   img.product {
     display: inline-block;
+  }
+  a.more {
+    margin-top: 25px;
+    color: #fff;
+    background: $color__red;
+    padding: 15px 50px;
+    border-radius: 5px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  a.more:hover {
+    background: $color__green;
+    color: #fff;
   }
 }
 
@@ -176,9 +191,14 @@
   }
 }
 
+.testimonials_bg {
+  @include md {
+    background: url(images/testimonials_bg.png) no-repeat center right ;
+  }
+}
 .testimonials {
   border-top: 10px solid $color__green;
-  background: rgba($color__green, .9);
+  background: rgba($color__green, .95);
   color: #fff;
   padding: 25px 0;
   @include md {

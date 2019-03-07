@@ -41,7 +41,7 @@ if( $products_list ): ?>
         <?php $i++; endforeach; ?>
       </div>
       <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-      <a class="more" href="<?php echo $sup_range_link; ?>">Shop the stock</a>
+      <a class="more wow fadeInUp" href="<?php echo $sup_range_link; ?>">Shop the stock</a>
     </div>
   </div>
 <?php endif; ?>

@@ -837,7 +837,8 @@ footer a {
 
 .main-products {
   border-top: 10px solid #F12A28;
-  text-align: center; }
+  text-align: center;
+  padding-bottom: 50px; }
   .main-products h2 {
     margin-top: 0; }
     .main-products h2 a {
@@ -864,6 +865,18 @@ footer a {
     margin-top: 25px; }
   .main-products img.product {
     display: inline-block; }
+  .main-products a.more {
+    margin-top: 25px;
+    color: #fff;
+    background: #F12A28;
+    padding: 15px 50px;
+    border-radius: 5px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 400; }
+  .main-products a.more:hover {
+    background: #38A571;
+    color: #fff; }
 
 .moto {
   border-top: 10px solid #F12A28;
@@ -927,9 +940,13 @@ footer a {
   .intro p:first-of-type {
     font-size: 25px; }
 
+@media screen and (min-width: 992px) {
+  .testimonials_bg {
+    background: url(images/testimonials_bg.png) no-repeat center right; } }
+
 .testimonials {
   border-top: 10px solid #38A571;
-  background: rgba(56, 165, 113, 0.9);
+  background: rgba(56, 165, 113, 0.95);
   color: #fff;
   padding: 25px 0; }
   @media screen and (min-width: 992px) {

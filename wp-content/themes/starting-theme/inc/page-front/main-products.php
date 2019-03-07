@@ -9,6 +9,8 @@
     */
 
     $post_objects = get_field('featured_products');
+    $rangeLink = get_field('range_link');
+
 
     if( $post_objects ): ?>
         <div class="row">
@@ -26,5 +28,6 @@
       </div>
         <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
     <?php endif; ?>
+    <a class="more wow fadeInUp" href="<?php echo $rangeLink; ?>">Shop the range</a>
   </div>
 </div>
