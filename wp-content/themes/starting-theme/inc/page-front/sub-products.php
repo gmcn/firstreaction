@@ -21,7 +21,7 @@ if( $products_list ): ?>
               </h2>
               <?php echo the_post_thumbnail('medium'); ?>
               <div class="add-to-cart">
-                <?php echo sprintf( '<a href="%s" data-quantity="1" class="%s" %s>%s</a>',
+                <?php echo sprintf( '<a href="%s" data-quantity="1" class="%s" %s>+ %s</a>',
                 esc_url( $product->add_to_cart_url() ),
                 esc_attr( implode( ' ', array_filter( array(
                     'button', 'product_type_' . $product->get_type(),
