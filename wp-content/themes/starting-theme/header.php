@@ -33,72 +33,151 @@
 	<header>
 		<div class="container-fluid">
 			<div class="row no-gutter">
-				<div class="col-md-4 site-branding">
+				<div class="col-xs-6 col-md-4 site-branding">
 					<h1><a href="/"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="<?php bloginfo( 'name' ); ?>"></a></h1>
 				</div><!-- /.col-md-4 .site-branding -->
-				<div class="col-md-4 shop">
-					<a href="https://facebook.com" target="_blank">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/fb_header.svg" alt="Follow us First Reaction on Facebook">
-					</a>
-					<a href="https://twitter.com" target="_blank">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/twitter_header.svg" alt="Follow us First Reaction on Twitter">
-					</a>
-
-					<nav class="navbar yamm" role="navigation">
-				     <ul class="nav navbar-nav navbar-shop">
+				<div class="col-xs-6 col-md-4 shop">
+					<?php if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) :
+						$count = WC()->cart->cart_contents_count; ?>
+							<a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>">
+								<?php if ( $count > 0 ) : ?>
+					        <span class="cart-contents-count">
+										<?php echo esc_html( $count ); ?>
+									</span>
+								<?php endif; ?>
+							</a>
+						<?php endif; ?>
+					<nav class="yamm" role="navigation">
+				     <ul class="navbar-shop">
 				       <li class="dropdown">
-				         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shop</a>
+				         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shop <img src="<?php echo get_template_directory_uri(); ?>/images/arrow.svg" alt="Shop Mega Menu"> </a>
 								 <ul class="dropdown-menu">
                 <li>
                   <!-- Content container to add padding -->
+									<div class="container">
                   <div class="yamm-content">
                     <div class="row">
-                      <ul class="col-sm-6 list-unstyled">
-                        <li>
-                          <p><strong>Section Title</strong></p>
-                        </li>
-                        <li>List Item</li>
-                        <li>List Item</li>
-                        <li>List Item</li>
-                        <li>List Item</li>
-                        <li>List Item</li>
-                        <li>List Item</li>
-                      </ul>
-                      <ul class="col-sm-6 list-unstyled">
-                        <li>
-                          <p><strong>Links Title</strong></p>
-                        </li>
-                        <li><a href="#"> Link Item </a></li>
-                        <li><a href="#"> Link Item </a></li>
-                        <li><a href="#"> Link Item </a></li>
-                        <li><a href="#"> Link Item </a></li>
-                        <li><a href="#"> Link Item </a></li>
-                        <li><a href="#"> Link Item </a></li>
-                      </ul>
-
+											<div class="col-xs-6 main">
+												<div class="wrapper matchheight">
+													<p>Main Products</p>
+													<div class="row main_products">
+														<div class="col-xs-2 col-lg-2 hidden-xs">
+															<img src="<?php echo get_template_directory_uri(); ?>/images/surface_mm.jpg" alt="Surface | Perfect for any wall space">
+														</div>
+														<div class="col-xs-10 col-lg-10 main_products__product">
+															<div class="left">
+																<h2>#1 Surface</h2>
+																<p>Perfect for any wall space</p>
+															</div>
+															<div class="right">
+																<a href="#">+ Shop Product</a>
+																<a href="#">+ Shop Refill Elements</a>
+															</div>
+														</div>
+													</div>
+													<div class="row main_products">
+														<div class="col-xs-2 col-lg-2 hidden-xs">
+															<img src="<?php echo get_template_directory_uri(); ?>/images/drawer_mm.jpg" alt="Drawer | Easy to integrate in any drawer">
+														</div>
+														<div class="col-xs-10 col-lg-10 main_products__product">
+															<div class="left">
+																<h2>#2 Drawer</h2>
+																<p>Easy to integrate in any drawer</p>
+															</div>
+															<div class="right">
+																<a href="#">+ Shop Product</a>
+																<a href="#">+ Shop Refill Elements</a>
+															</div>
+														</div>
+													</div>
+													<div class="row main_products">
+														<div class="col-xs-2 col-lg-2 hidden-xs">
+															<img src="<?php echo get_template_directory_uri(); ?>/images/cupboard_mm.jpg" alt="Cupboard | Excellent for cupboards">
+														</div>
+														<div class="col-xs-10 col-lg-10 main_products__product">
+															<div class="left">
+																<h2>#3 Cupboard</h2>
+																<p>Excellent for cupboards</p>
+															</div>
+															<div class="right">
+																<a href="#">+ Shop Product</a>
+																<a href="#">+ Shop Refill Elements</a>
+															</div>
+														</div>
+													</div>
+													<div class="row main_products">
+														<div class="col-xs-2 col-lg-2 hidden-xs">
+															<img src="<?php echo get_template_directory_uri(); ?>/images/verticaldrawer_mm.jpg" alt="Verticaldrawer | A slick way to be safe.">
+														</div>
+														<div class="col-xs-10 col-lg-10 main_products__product">
+															<div class="left">
+																<h2>#4 Verticaldrawer</h2>
+																<p>A slick way to be safe.</p>
+															</div>
+															<div class="right">
+																<a href="#">+ Shop Product</a>
+																<a href="#">+ Shop Refill Elements</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-xs-6 sub">
+												<div class="wrapper matchheight">
+												<p>Single Elements</p>
+													<div class="row">
+														<div class="col-md-4 fire-safety">
+															<img src="<?php echo get_template_directory_uri(); ?>/images/fire-safety.svg" alt="Fire Safety">
+															<h3>Fire Safety</h3>
+															<?php wp_nav_menu( array(
+																'theme_location' => 'fire-safety',
+															 ) );
+																?>
+														</div>
+														<div class="col-md-4 health-safety">
+															<img src="<?php echo get_template_directory_uri(); ?>/images/health-safety.svg" alt="Health Safety">
+															<h3>Health Safety</h3>
+															<?php wp_nav_menu( array(
+																'theme_location' => 'health-safety',
+															 ) );
+																?>
+														</div>
+														<div class="col-md-4 general-safety">
+															<img src="<?php echo get_template_directory_uri(); ?>/images/general-safety.svg" alt="General Safety">
+															<h3>General Safety</h3>
+															<?php wp_nav_menu( array(
+																'theme_location' => 'general-safety',
+															 ) );
+																?>
+														</div>
+													</div>
+												</div>
+											</div>
                     </div>
+										<div class="row">
+											<div class="col-md-12 tagline">
+												<h1>PROTECT YOUR FAMILY & HOME</h1>
+											</div>
+										</div>
                   </div>
+								</div>
                 </li>
               </ul>
 				       </li>
 				     </ul>
 					</nav>
 
-					<?php if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+					<a href="https://facebook.com" target="_blank">
+					<img class="social" src="<?php echo get_template_directory_uri(); ?>/images/fb_header.svg" alt="Follow us First Reaction on Facebook">
+					</a>
+					<a href="https://twitter.com" target="_blank">
+					<img class="social" src="<?php echo get_template_directory_uri(); ?>/images/twitter_header.svg" alt="Follow us First Reaction on Twitter">
+					</a>
 
-					    $count = WC()->cart->cart_contents_count;
-					    ?><a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php
-					    if ( $count > 0 ) {
-					        ?>
-					        <span class="cart-contents-count"><?php echo esc_html( $count ); ?></span>
-					        <?php
-					    }
-					        ?></a>
 
-					<?php } ?>
 
 				</div><!-- /.col-md-4 -->
-				<div class="col-md-4">
+				<div class="col-md-4 hidden-xs hidden-sm">
 					<!-- Static navbar -->
 				      <nav class="navbar navbar-default">
 				        <div class="container-fluid">
