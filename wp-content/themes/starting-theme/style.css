@@ -497,18 +497,101 @@ a {
  *
  * @geedmo - Licensed under the MIT license
  */
+.yamm .navbar-shop {
+  float: right;
+  list-style: none;
+  margin: 5px 0 0 10px;
+  padding: 0; }
+  @media screen and (min-width: 992px) {
+    .yamm .navbar-shop {
+      margin: 5px 0 0 50px; } }
+  .yamm .navbar-shop a img {
+    transition: .5s; }
+  .yamm .navbar-shop .open a img {
+    transform: rotate(180deg); }
+  .yamm .navbar-shop a {
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 700; }
+  .yamm .navbar-shop a:hover {
+    text-transform: uppercase;
+    color: #F12A28;
+    font-weight: 700; }
 .yamm .nav, .yamm .collapse, .yamm .dropup, .yamm .dropdown {
   position: static; }
 .yamm .container {
   position: relative; }
 .yamm .dropdown-menu {
   position: fixed;
-  top: 50px;
+  top: 45px;
   left: 0;
-  width: 100%;
-  height: 100vh; }
+  width: 100%; }
 .yamm .yamm-content {
-  padding: 20px 30px; }
+  padding: 0; }
+  @media screen and (min-width: 992px) {
+    .yamm .yamm-content {
+      padding: 50px 30px; } }
+  .yamm .yamm-content .main p, .yamm .yamm-content .sub p {
+    border-bottom: 2px solid rgba(114, 109, 109, 0.3);
+    font-size: 18px;
+    font-weight: 700;
+    padding-bottom: 25px;
+    color: #726D6D;
+    margin-bottom: 25px; }
+  .yamm .yamm-content .main ul, .yamm .yamm-content .sub ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    .yamm .yamm-content .main ul li, .yamm .yamm-content .sub ul li {
+      margin-bottom: 5px; }
+      .yamm .yamm-content .main ul li a, .yamm .yamm-content .sub ul li a {
+        color: rgba(42, 68, 69, 0.7);
+        font-weight: 400;
+        text-transform: none;
+        transition: .5s; }
+  .yamm .yamm-content .main .wrapper, .yamm .yamm-content .sub .wrapper {
+    border-bottom: 2px solid rgba(114, 109, 109, 0.3);
+    padding: 50px 0; }
+    .yamm .yamm-content .main .wrapper img, .yamm .yamm-content .sub .wrapper img {
+      margin-bottom: 10px; }
+  .yamm .yamm-content .main .general-safety h3, .yamm .yamm-content .sub .general-safety h3 {
+    color: #01476A;
+    padding-bottom: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    border-bottom: 2px solid #01476A;
+    margin-top: 0; }
+  .yamm .yamm-content .main .general-safety a:hover, .yamm .yamm-content .sub .general-safety a:hover {
+    color: #01476A;
+    font-weight: 400; }
+  .yamm .yamm-content .main .health-safety h3, .yamm .yamm-content .sub .health-safety h3 {
+    color: #38A571;
+    padding-bottom: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    border-bottom: 2px solid #38A571;
+    margin-top: 0; }
+  .yamm .yamm-content .main .health-safety a:hover, .yamm .yamm-content .sub .health-safety a:hover {
+    color: #38A571;
+    padding-bottom: 15px;
+    font-weight: 400; }
+  .yamm .yamm-content .main .fire-safety h3, .yamm .yamm-content .sub .fire-safety h3 {
+    color: #F12A28;
+    padding-bottom: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    border-bottom: 2px solid #F12A28;
+    margin-top: 0; }
+  .yamm .yamm-content .main .fire-safety a:hover, .yamm .yamm-content .sub .fire-safety a:hover {
+    color: #F12A28;
+    font-weight: 400; }
+  .yamm .yamm-content .tagline h1 {
+    font-size: 38px;
+    font-weight: 700;
+    color: rgba(114, 109, 109, 0.3);
+    text-align: center;
+    padding: 50px 0 25px 0;
+    letter-spacing: 2px; }
 .yamm .dropdown.yamm-fw .dropdown-menu {
   left: 0;
   right: 0; }
@@ -626,46 +709,96 @@ a {
   ul.nav li.menu-item-has-children:hover > ul.dropdown-menu {
     display: block !important; } }
 
-header .site-branding h1 {
-  margin: 0; }
-header .shop {
-  padding: 10px; }
-  header .shop img {
-    float: left;
-    height: 30px;
-    padding-right: 10px; }
-  header .shop .cart-contents {
-    position: relative;
-    float: right; }
-  header .shop .cart-contents:before {
-    content: url(images/basket_header.svg);
-    margin-top: 10px;
-    font-style: normal;
-    font-weight: 400;
-    vertical-align: bottom; }
-  header .shop .cart-contents:hover {
-    text-decoration: none; }
-  header .shop .cart-contents-count {
-    color: #000;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    bottom: 4px;
-    text-align: center; }
-header .navbar-shop {
-  float: left; }
-  header .navbar-shop ul {
-    padding: 0;
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  background: #fff;
+  height: 50px; }
+  header .site-branding h1 {
     margin: 0; }
-header .navbar-default {
-  background: url(images/navbar_before.png) rgba(241, 42, 40, 0.95) no-repeat; }
-  header .navbar-default li > a {
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: 1px; }
+  header .shop {
+    padding: 10px 0 0 0; }
+    header .shop img.social {
+      float: right;
+      margin-top: 5px;
+      height: 20px;
+      padding-right: 10px; }
+    header .shop .cart-contents {
+      position: relative;
+      float: right;
+      margin-left: 25px; }
+    header .shop .cart-contents:before {
+      content: url(images/basket_header.svg);
+      margin-top: 10px;
+      font-style: normal;
+      font-weight: 400;
+      vertical-align: bottom; }
+    header .shop .cart-contents:hover {
+      text-decoration: none; }
+    header .shop .cart-contents-count {
+      color: #000;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      bottom: 4px;
+      text-align: center; }
+  header .navbar-shop .main .main_products {
+    color: #726D6D; }
+    header .navbar-shop .main .main_products h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 5px; }
+    header .navbar-shop .main .main_products p {
+      font-weight: 300;
+      font-size: 11px;
+      border-bottom: none;
+      margin-bottom: 0;
+      color: #9D9D9D;
+      padding-bottom: 10px; }
+      @media screen and (min-width: 992px) {
+        header .navbar-shop .main .main_products p {
+          padding-bottom: 25px; } }
+    header .navbar-shop .main .main_products img {
+      max-height: 100px !important;
+      max-width: 70px; }
+    header .navbar-shop .main .main_products .left {
+      display: inline-block; }
+    header .navbar-shop .main .main_products .right {
+      clear: both;
+      margin-left: 0; }
+      @media screen and (min-width: 992px) {
+        header .navbar-shop .main .main_products .right {
+          display: none; } }
+      header .navbar-shop .main .main_products .right a {
+        display: block;
+        text-transform: none;
+        color: #38A571; }
+      header .navbar-shop .main .main_products .right a:hover {
+        color: #726D6D; }
+      header .navbar-shop .main .main_products .right a:first-of-type {
+        color: #F12A28; }
+      header .navbar-shop .main .main_products .right a:first-of-type:hover {
+        color: #726D6D; }
+    @media screen and (min-width: 992px) {
+      header .navbar-shop .main .main_products:hover .right {
+        margin-left: 25px;
+        padding: 0 20px;
+        border-left: 1px solid #726D6D;
+        border-right: 1px solid #726D6D;
+        display: inline-block; } }
+  header .navbar-default {
+    background: url(images/navbar_before.png) rgba(241, 42, 40, 0.95) no-repeat; }
+    header .navbar-default li > a {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 1px; }
+
+.site-content {
+  padding-top: 50px; }
 
 /*--------------------------------------------------------------
 # Footer
@@ -1067,7 +1200,7 @@ footer a {
       text-align: center;
       clear: both;
       background-color: #38A571; }
-  .sub-products .add_to_cart_button {
+  .sub-products .add_to_cart_button, .sub-products .ajax_add_to_cart {
     margin-top: 25px;
     color: #fff;
     background: #B5B5B5;

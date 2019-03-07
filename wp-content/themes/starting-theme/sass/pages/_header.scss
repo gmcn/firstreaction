@@ -17,21 +17,28 @@ ul.nav li.menu-item-has-children:hover > ul.dropdown-menu {
 }
 
 header {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  background: #fff;
+  height: 50px;
   .site-branding {
     h1 {
       margin: 0;
     }
   }
   .shop {
-    padding: 10px;
-    img {
-      float: left;
-      height: 30px;
+    padding: 10px 0 0 0;
+    img.social {
+      float: right;
+      margin-top: 5px;
+      height: 20px;
       padding-right: 10px;
     }
     .cart-contents {
       position: relative;
       float: right;
+      margin-left: 25px;
     }
     .cart-contents:before {
       content: url(images/basket_header.svg);
@@ -60,10 +67,65 @@ header {
     }
   }
   .navbar-shop {
-    float: left;
-    ul {
-      padding: 0;
-      margin: 0;
+    .main {
+      .main_products {
+        color: $color__grey;
+        h2 {
+          font-size: 18px;
+          font-weight: 700;
+          margin-bottom: 5px;
+        }
+        p {
+          font-weight: 300;
+          font-size: 11px;
+          border-bottom: none;
+          margin-bottom: 0;
+          color: #9D9D9D;
+          padding-bottom: 10px;
+          @include md {
+            padding-bottom: 25px;
+          }
+        }
+        img {
+          max-height: 100px !important;
+          max-width: 70px;
+        }
+        .left {
+          display: inline-block;
+        }
+        .right {
+          clear: both;
+          margin-left: 0;
+          @include md {
+            display: none;
+          }
+          a {
+            display: block;
+            text-transform: none;
+            color: $color__green;
+          }
+          a:hover {
+            color: $color__grey;
+          }
+          a:first-of-type {
+            color: $color__red;
+          }
+          a:first-of-type:hover {
+            color: $color__grey;
+          }
+        }
+        &:hover {
+          .right {
+            @include md {
+              margin-left: 25px;
+              padding: 0 20px;
+              border-left: 1px solid $color__grey;
+              border-right: 1px solid $color__grey;
+              display: inline-block;
+            }
+          }
+        }
+      }
     }
   }
   .navbar-default {
@@ -75,4 +137,8 @@ header {
       letter-spacing: 1px;
     }
   }
+}
+
+.site-content {
+  padding-top: 50px;
 }
