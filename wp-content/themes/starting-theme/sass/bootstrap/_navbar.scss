@@ -192,7 +192,7 @@
   @include navbar-vertical-align(34px);
   background-color: transparent;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  border: 1px solid transparent;
+  border: none;
   border-radius: $border-radius-base;
 
   // We remove the `outline` here, but later compensate by attaching `:hover`
@@ -389,7 +389,7 @@
 
 // Default navbar
 .navbar-default {
-  background-color: $color__red;
+  // background-color: $color__red;
 
   .navbar-brand {
     color: $navbar-default-brand-color;
@@ -437,9 +437,17 @@
     &:hover,
     &:focus {
       background-color: $navbar-default-toggle-hover-bg;
+      @include md {
+        background-color: $color__red;
+      }
+
     }
     .icon-bar {
       background-color: $navbar-default-toggle-icon-bar-bg;
+      @include md {
+        background-color: #fff;
+      }
+
     }
   }
 

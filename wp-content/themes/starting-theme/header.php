@@ -33,10 +33,15 @@
 	<header>
 		<div class="container-fluid">
 			<div class="row no-gutter">
-				<div class="col-xs-6 col-md-4 site-branding">
-					<h1><a href="/"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="<?php bloginfo( 'name' ); ?>"></a></h1>
+				<div class="col-xs-2 col-md-4 site-branding">
+					<h1>
+						<a href="/">
+							<img class="hidden-sm hidden-md hidden-lg" src="<?php echo get_template_directory_uri(); ?>/images/logo-mark.svg" alt="<?php bloginfo( 'name' ); ?>">
+							<img class="hidden-xs" src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="<?php bloginfo( 'name' ); ?>">
+						</a>
+					</h1>
 				</div><!-- /.col-md-4 .site-branding -->
-				<div class="col-xs-6 col-md-4 shop">
+				<div class="col-xs-8 col-md-4 shop">
 					<?php if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) :
 						$count = WC()->cart->cart_contents_count; ?>
 							<a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>">
@@ -177,7 +182,7 @@
 
 
 				</div><!-- /.col-md-4 -->
-				<div class="col-md-4 hidden-xs hidden-sm">
+				<div class="col-md-4">
 					<!-- Static navbar -->
 				      <nav class="navbar navbar-default">
 				        <div class="container-fluid">

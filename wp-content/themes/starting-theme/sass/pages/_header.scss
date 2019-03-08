@@ -23,12 +23,18 @@ header {
   background: #fff;
   height: 50px;
   .site-branding {
+    z-index: 99999;
     h1 {
-      margin: 0;
+      margin: 0 0 0 15px;
     }
   }
   .shop {
     padding: 10px 0 0 0;
+    z-index: 999999999;
+    margin-right: 50px;
+    @include md {
+      margin-right: 0;
+    }
     img.social {
       float: right;
       margin-top: 5px;
@@ -129,12 +135,29 @@ header {
     }
   }
   .navbar-default {
-    background: url(images/navbar_before.png) rgba($color__red, .95) no-repeat;
+    @include md {
+      background: url(images/navbar_before.png) rgba($color__red, .95) no-repeat;
+    }
+    .navbar-toggle {
+      margin-top: -35px;
+      @include sm {
+        margin-top: 10px;
+      }
+      @include md {
+        margin-top: 10px;
+      }
+    }
     li > a {
       text-transform: uppercase;
       font-weight: 600;
       font-size: 14px;
       letter-spacing: 1px;
+    }
+    .navbar-collapse {
+      background: $color__red;
+      @include lg {
+        background: none;
+      }
     }
   }
 }
