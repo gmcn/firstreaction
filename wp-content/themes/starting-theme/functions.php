@@ -218,6 +218,17 @@ function cc_mime_types($mimes) {
 }
 add_filter('upload_mimes', 'cc_mime_types');
 
+//remove contact form 7 styles
+add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
+function wps_deregister_styles() {
+    wp_deregister_style( 'contact-form-7' );
+}
+
+//adding sitewide ACF
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page();
+}
+
 /**
  * Code to add the custom login css file to the theme
  * - file is "/login/custom-login-styles.css"
