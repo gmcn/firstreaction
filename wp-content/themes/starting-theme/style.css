@@ -535,9 +535,11 @@ a {
     border-bottom: 2px solid rgba(114, 109, 109, 0.3);
     font-size: 18px;
     font-weight: 700;
-    padding-bottom: 25px;
-    color: #726D6D;
-    margin-bottom: 25px; }
+    color: #726D6D; }
+    @media screen and (min-width: 992px) {
+      .yamm .yamm-content .main p, .yamm .yamm-content .sub p {
+        margin-bottom: 25px;
+        padding-bottom: 25px; } }
   .yamm .yamm-content .main ul, .yamm .yamm-content .sub ul {
     margin: 0;
     padding: 0;
@@ -549,11 +551,12 @@ a {
         font-weight: 400;
         text-transform: none;
         transition: .5s; }
-  .yamm .yamm-content .main .wrapper, .yamm .yamm-content .sub .wrapper {
-    border-bottom: 2px solid rgba(114, 109, 109, 0.3);
-    padding: 50px 0; }
-    .yamm .yamm-content .main .wrapper img, .yamm .yamm-content .sub .wrapper img {
-      margin-bottom: 10px; }
+  @media screen and (min-width: 992px) {
+    .yamm .yamm-content .main .wrapper, .yamm .yamm-content .sub .wrapper {
+      padding: 50px 0;
+      border-bottom: 2px solid rgba(114, 109, 109, 0.3); } }
+  .yamm .yamm-content .main .wrapper img, .yamm .yamm-content .sub .wrapper img {
+    margin-bottom: 10px; }
   .yamm .yamm-content .main .general-safety h3, .yamm .yamm-content .sub .general-safety h3 {
     color: #01476A;
     padding-bottom: 5px;
@@ -1100,10 +1103,12 @@ footer a {
   border-top: 10px solid #38A571;
   background: rgba(56, 165, 113, 0.95);
   color: #fff;
-  padding: 25px 0; }
+  padding-top: 25px;
+  padding-bottom: 25px; }
   @media screen and (min-width: 992px) {
     .home .testimonials {
-      padding: 80px 0; } }
+      padding-top: 80px;
+      padding-bottom: 80px; } }
   .home .testimonials h1 {
     text-align: center;
     color: rgba(0, 0, 0, 0.4);
@@ -1277,12 +1282,15 @@ footer a {
   color: rgba(255, 255, 255, 0.5);
   text-transform: uppercase; }
 .site-content h1 {
-  font-size: 55px;
+  font-size: 35px;
   font-weight: 700;
   color: #fff;
   text-transform: lowercase;
   margin-bottom: 40px;
   margin-top: 10px; }
+  @media screen and (min-width: 992px) {
+    .site-content h1 {
+      font-size: 55px; } }
 
 .page .social_main {
   background: #0E1A1A;
@@ -1307,12 +1315,18 @@ footer a {
   position: relative; }
   .about_main h1 {
     position: absolute;
-    font-size: 250px;
+    font-size: 100px;
     margin: 0;
     padding: 0;
     left: 0;
     top: 25px;
     color: rgba(255, 255, 255, 0.5); }
+    @media screen and (min-width: 992px) {
+      .about_main h1 {
+        font-size: 150px; } }
+    @media screen and (min-width: 1200px) {
+      .about_main h1 {
+        font-size: 250px; } }
   .about_main .copy {
     background: rgba(32, 58, 59, 0.9); }
     @media screen and (min-width: 992px) {
@@ -1397,7 +1411,7 @@ footer a {
   .section-one__copy {
     padding: 50px 0 50px 0;
     color: #2A7C55; }
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 1200px) {
       .section-one__copy {
         padding: 150px 0 150px 0; } }
     .section-one__copy h2 {
@@ -1405,8 +1419,11 @@ footer a {
       color: #2A7C55;
       text-transform: uppercase; }
     .section-one__copy h3 {
-      font-size: 54px;
+      font-size: 32px;
       font-weight: 700; }
+      @media screen and (min-width: 992px) {
+        .section-one__copy h3 {
+          font-size: 54px; } }
     .section-one__copy img.seperator {
       margin-top: 12px;
       margin-bottom: 24px; }
@@ -1429,15 +1446,21 @@ footer a {
     .section-two .stripe__content {
       transform: skew(5deg); } }
   .section-two__copy {
-    padding: 150px 0 150px 0;
+    padding: 50px 0 50px 0;
     color: #726D6D; }
+    @media screen and (min-width: 1200px) {
+      .section-two__copy {
+        padding: 150px 0 150px 0; } }
     .section-two__copy h2 {
       font-size: 12px;
       color: #726D6D;
       text-transform: uppercase; }
     .section-two__copy h3 {
-      font-size: 54px;
+      font-size: 32px;
       font-weight: 700; }
+      @media screen and (min-width: 992px) {
+        .section-two__copy h3 {
+          font-size: 54px; } }
     .section-two__copy img.seperator {
       margin-top: 25px;
       margin-bottom: 50px; }
