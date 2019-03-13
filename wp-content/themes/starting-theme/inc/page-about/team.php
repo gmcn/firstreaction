@@ -25,7 +25,7 @@
 
           </div>
 
-          <img class="seperator" src="//localhost:3000/wp-content/themes/starting-theme/images/product_bottom.svg" alt="Wallhung">
+          <img class="seperator" src="<?php echo get_template_directory_uri(); ?>/images/product_bottom.svg" alt="<?php echo $team_member_name ?>">
 
           <h5><?php echo $team_member_title ?></h5>
 

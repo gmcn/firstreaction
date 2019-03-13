@@ -3,7 +3,13 @@
   position: relative;
   h1 {
     position: absolute;
-    font-size: 250px;
+    font-size: 100px;
+    @include md {
+      font-size: 150px;
+    }
+    @include lg {
+      font-size: 250px;
+    }
     margin: 0;
     padding: 0;
     left: 0;
@@ -105,7 +111,7 @@
   }
   &__copy {
     padding: 50px 0 50px 0;
-    @include md {
+    @include lg {
       padding: 150px 0 150px 0;
     }
     color: #2A7C55;
@@ -115,7 +121,10 @@
       text-transform: uppercase;
     }
     h3 {
-      font-size: 54px;
+      font-size: 32px;
+      @include md {
+        font-size: 54px;
+      }
       font-weight: 700;
     }
     img.seperator {
@@ -147,7 +156,10 @@
     }
   }
   &__copy {
-    padding: 150px 0 150px 0;
+    padding: 50px 0 50px 0;
+    @include lg {
+      padding: 150px 0 150px 0;
+    }
     color: #726D6D;
     h2 {
       font-size: 12px;
@@ -155,7 +167,10 @@
       text-transform: uppercase;
     }
     h3 {
-      font-size: 54px;
+      font-size: 32px;
+      @include md {
+        font-size: 54px;
+      }
       font-weight: 700;
     }
     img.seperator {
