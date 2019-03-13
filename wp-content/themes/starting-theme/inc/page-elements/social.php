@@ -1,5 +1,5 @@
 <div class="container-fluid page" <?php if ($bgImage): ?>
-  style="padding-bottom: 1000px; background: url(<?php echo $bgImage ?>) bottom center no-repeat; background-size: 100% 75%;"
+  style="padding-bottom: 1000px; background: #0E1A1A url(<?php echo $bgImage ?>) bottom center no-repeat; background-size: 100% 75%;"
 <?php endif; ?>>
   <div class="container social_main">
     <div class="row">
@@ -16,7 +16,7 @@
             $socialLink = get_sub_field('social_link');
 						?>
 
-            <div class="col-sm-3">
+            <div class="col-xs-3">
               <a href="<?php echo $socialLink ?>">
                 <h3><?php echo $socialName ?></h3>
                 <img src="<?php echo $sociaIicon ?>" alt="Follow Us On <?php echo $socialName ?>">
