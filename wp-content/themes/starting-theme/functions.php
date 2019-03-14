@@ -229,6 +229,12 @@ if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();
 }
 
+//woocommerce support
+function mytheme_add_woocommerce_support() {
+	add_theme_support( 'woocommerce' );
+}
+add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
+
 /**
  * Code to add the custom login css file to the theme
  * - file is "/login/custom-login-styles.css"
