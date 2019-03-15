@@ -10,6 +10,16 @@
   controls: false,
   });
 
+  $('.gallery').bxSlider({
+  // auto: false,
+  // autoStart: true,
+  // speed: 1000,
+  autoControls: false,
+  // stopAutoOnClick: false,
+  pager: false,
+  controls: true,
+  });
+
   /**
    * Match Height (Including Safari onload fix)
    */

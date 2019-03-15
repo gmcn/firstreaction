@@ -1,16 +1,11 @@
 <div class="container-fluid news-single">
   <div class="row">
     <div class="col-md-5 feat-img matchheight">
+      <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" />
       <?php if( have_rows('gallery') ): ?>
           <a class="fancybox" rel="group" href="<?php the_post_thumbnail_url(); ?>" title="<?php the_title(); ?>">
-            <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" />
-          </a>
-          <img class="more" src="<?php echo get_template_directory_uri() ?>/images/photo-camera.svg" alt="View <?php the_title() ?> Gallery">
-          <div class="col-md-12 galleryinfo">
-            <p>Click on the icon above to enlarge and view all images.</p>
-          </div>
-        <?php else : ?>
-          <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" />
+            <img class="more" src="<?php echo get_template_directory_uri() ?>/images/photo-camera.svg" alt="View <?php the_title() ?> Gallery">
+          </a>         
         <?php endif; ?>
 
         <?php next_post_link( '%link', 'Next Article', TRUE ); ?>
