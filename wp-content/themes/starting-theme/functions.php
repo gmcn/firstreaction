@@ -87,6 +87,14 @@ function starting_theme_content_width() {
 }
 add_action( 'after_setup_theme', 'starting_theme_content_width', 0 );
 
+//woocommerce support
+function starting_theme_add_woocommerce_support() {
+	add_theme_support( 'woocommerce' );
+	add_theme_support( 'wc-product-gallery-zoom' );
+	add_theme_support( 'wc-product-gallery-lightbox' );
+}
+add_action( 'after_setup_theme', 'starting_theme_add_woocommerce_support' );
+
 /**
  * Register widget area.
  *
@@ -228,12 +236,6 @@ function wps_deregister_styles() {
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();
 }
-
-//woocommerce support
-function mytheme_add_woocommerce_support() {
-	add_theme_support( 'woocommerce' );
-}
-add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 
 /**
  * Code to add the custom login css file to the theme
