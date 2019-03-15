@@ -1,4 +1,4 @@
-<div class="container-fluid title">
+<div class="container-fluid title-single">
   <div class="container">
     <div class="col-md-4 wow fadeInLeft">
       <h2>Stay up to date</h2>
