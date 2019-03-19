@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all pages
+  * Template Name: Woocommerce
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -17,10 +17,13 @@ get_header(); ?>
 <?php
 include(locate_template("inc/page-elements/breadcrumbs.php"));
 include(locate_template("inc/page/title.php"));
-include(locate_template("inc/page/product.php"));
 ?>
 
-<?php echo the_content() ?>
+<?php if ( have_posts() ) : ?>
+
+  <?php echo woocommerce_content(); ?>
+
+<?php endif; ?>
 
 <?php
 get_footer();
