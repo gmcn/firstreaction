@@ -75,7 +75,7 @@
 																<p>Perfect for any wall space</p>
 															</div>
 															<div class="right">
-																<a href="#">+ Shop Product</a>
+																<a href="/product/surface/">+ Shop Product</a>
 																<a href="#">+ Shop Refill Elements</a>
 															</div>
 														</div>
@@ -90,7 +90,7 @@
 																<p>Easy to integrate in any drawer</p>
 															</div>
 															<div class="right">
-																<a href="#">+ Shop Product</a>
+																<a href="/product/drawer/">+ Shop Product</a>
 																<a href="#">+ Shop Refill Elements</a>
 															</div>
 														</div>
@@ -105,7 +105,7 @@
 																<p>Excellent for cupboards</p>
 															</div>
 															<div class="right">
-																<a href="#">+ Shop Product</a>
+																<a href="/product/cupboard/">+ Shop Product</a>
 																<a href="#">+ Shop Refill Elements</a>
 															</div>
 														</div>
@@ -120,7 +120,7 @@
 																<p>A slick way to be safe.</p>
 															</div>
 															<div class="right">
-																<a href="#">+ Shop Product</a>
+																<a href="/product/vertical-drawer/">+ Shop Product</a>
 																<a href="#">+ Shop Refill Elements</a>
 															</div>
 														</div>
