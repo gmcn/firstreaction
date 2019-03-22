@@ -49,6 +49,12 @@ if ( $product->is_in_stock() ) : ?>
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 	</form>
 
+	<?php $refillProducts = get_field('refill_products'); ?>
+
+	<?php if ($refillProducts) : ?>
+		<a class="refills" href="<?php echo $refillProducts ?>">+ View item refills</a>
+	<?php endif; ?>
+
 	<?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
 
 <?php endif; ?>

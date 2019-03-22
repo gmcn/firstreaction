@@ -16,12 +16,19 @@ get_header(); ?>
 
 <?php
 include(locate_template("inc/page-elements/breadcrumbs.php"));
-include(locate_template("inc/page/title.php"));
 ?>
 
-<?php if ( have_posts() ) : ?>
+<?php if ( is_singular( 'product' ) ) : ?>
 
-  <?php echo woocommerce_content(); ?>
+  <?php
+  include(locate_template("inc/woocommerce/single.php"));
+  ?>
+
+<?php else : ?>
+
+<?php
+include(locate_template("inc/woocommerce/loop.php"));
+?>
 
 <?php endif; ?>
 

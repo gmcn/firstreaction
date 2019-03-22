@@ -25,6 +25,7 @@
    */
   function startMatchHeight() {
     $('.matchheight').matchHeight();
+    $('.matchproduct-single').matchHeight();
   }
   window.onload = startMatchHeight;
 

@@ -237,6 +237,23 @@ if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();
 }
 
+// add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+
+//WooCommerce order overrides
+
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+
+
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 10 );
+
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 20 );
+
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 10 );
+
 /**
  * Code to add the custom login css file to the theme
  * - file is "/login/custom-login-styles.css"

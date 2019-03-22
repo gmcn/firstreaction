@@ -28,21 +28,133 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 $tabs = apply_filters( 'woocommerce_product_tabs', array() );
 
-if ( ! empty( $tabs ) ) : ?>
+if ( ! empty( $tabs ) ) :
+
+	$box_intro = get_field('box_intro');
+	$infoGraphic = get_field('info_graphic');
+
+	$tech_intro = get_field('tech_intro');
+
+	?>
 
 	<div class="woocommerce-tabs wc-tabs-wrapper">
-		<ul class="tabs wc-tabs" role="tablist">
-			<?php foreach ( $tabs as $key => $tab ) : ?>
-				<li class="<?php echo esc_attr( $key ); ?>_tab" id="tab-title-<?php echo esc_attr( $key ); ?>" role="tab" aria-controls="tab-<?php echo esc_attr( $key ); ?>">
-					<a href="#tab-<?php echo esc_attr( $key ); ?>"><?php echo apply_filters( 'woocommerce_product_' . $key . '_tab_title', esc_html( $tab['title'] ), $key ); ?></a>
-				</li>
-			<?php endforeach; ?>
+		<!-- Nav tabs -->
+		<ul class="nav nav-tabs" role="tablist">
+		<li class="active"><a href="#description" role="tab" data-toggle="tab">Description</a></li>
+		<li><a href="#box" role="tab" data-toggle="tab">What's in the box</a></li>
+		<li><a href="#tech" role="tab" data-toggle="tab">Technical Specification</a></li>
 		</ul>
-		<?php foreach ( $tabs as $key => $tab ) : ?>
-			<div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--<?php echo esc_attr( $key ); ?> panel entry-content wc-tab" id="tab-<?php echo esc_attr( $key ); ?>" role="tabpanel" aria-labelledby="tab-title-<?php echo esc_attr( $key ); ?>">
-				<?php if ( isset( $tab['callback'] ) ) { call_user_func( $tab['callback'], $key, $tab ); } ?>
+
+		<!-- Tab panes -->
+		<div class="tab-content">
+		<div class="tab-pane active" id="description"><?php echo the_content(); ?></div>
+		<div class="tab-pane" id="box">
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="intro">
+						<?php echo $box_intro ?>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<?php if( have_rows('box_contents') ): ?>
+
+							<ul class="included_products">
+
+								Contents
+
+								<?php $i = 1; while( have_rows('box_contents') ): the_row();
+
+									// vars
+									$boxContentsName = get_sub_field('box_contents_name');
+
+									?>
+
+									<li>
+
+										#<?php echo $i; ?> <?php echo $boxContentsName ?>
+
+									</li>
+
+								<?php $i++; endwhile; ?>
+
+							</ul>
+
+						<?php endif; ?>
+				</div>
+				<div class="col-md-8 box_image">
+					<img src="<?php echo $infoGraphic ?>" alt="<?php echo the_title(); ?>">
+				</div>
 			</div>
-		<?php endforeach; ?>
+
+		</div>
+		<div class="tab-pane" id="tech">
+
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="intro">
+						<?php echo $tech_intro ?>
+					</div>
+				</div>
+				<div class="col-md-12">
+
+
+					<?php if( have_rows('tech_table') ): ?>
+
+						<?php while( have_rows('tech_table') ): the_row();
+
+							// vars
+							$item_name = get_sub_field('item_name');
+							$item_no = get_sub_field('item_no');
+							$link_to_single_product = get_sub_field('link_to_single_product');
+
+							?>
+
+							<div class="tech_table matchheight">
+
+								<div class="item_title">
+									<?php echo $item_name ?>
+								</div>
+
+								<div class="item_no">
+									<p>item no:</p>
+									<h3><?php echo $item_no ?></h3>
+								</div>
+
+								<?php if( have_rows('item_details') ): ?>
+
+										<?php
+
+										// loop through rows (sub repeater)
+										while( have_rows('item_details') ): the_row();
+
+										$item_detail = get_sub_field('item_detail');
+
+											// display each item as a list - with a class of completed ( if completed )
+											?>
+											<div class="item_details matchitem">
+												<?php echo $item_detail; ?>
+											</div>
+										<?php endwhile; ?>
+
+
+									<?php endif; ?>
+
+							</div>
+
+						<?php endwhile; ?>
+
+					<?php endif; ?>
+
+
+
+				</div>
+			</div>
+
+
+		</div>
+		</div>
 	</div>
 
 <?php endif; ?>

@@ -24,11 +24,41 @@ global $post;
 
 $short_description = apply_filters( 'woocommerce_short_description', $post->post_excerpt );
 
-if ( ! $short_description ) {
-	return;
-}
+// if ( ! $short_description ) {
+// 	return;
+// }
 
 ?>
 <div class="woocommerce-product-details__short-description">
+	<?php
+
+	/*
+	*  Loop through post objects (assuming this is a multi-select field) ( setup postdata )
+	*  Using this method, you can use all the normal WP functions as the $post object is temporarily initialized within the loop
+	*  Read more: http://codex.wordpress.org/Template_Tags/get_posts#Reset_after_Postlists_with_offset
+	*/
+
+	$post_objects = get_field('included_products');
+
+
+	if( $post_objects ): ?>
+			<ul class="included_products">
+				Contents
+			<?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
+					<?php setup_postdata($post); ?>
+
+						<li>
+							<a class="product" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+						</li>
+
+					<?php endforeach; ?>
+					<img class="seperator" src="<?php echo get_template_directory_uri() ?>/images/product_bottom.svg" alt="<?php the_title(); ?>">
+			</ul>
+
+			<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+	<?php endif; ?>
+
 	<?php echo $short_description; // WPCS: XSS ok. ?>
+
+
 </div>
