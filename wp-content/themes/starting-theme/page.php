@@ -18,9 +18,8 @@ get_header(); ?>
 include(locate_template("inc/page-elements/breadcrumbs.php"));
 include(locate_template("inc/page/title.php"));
 include(locate_template("inc/page/product.php"));
+include(locate_template("inc/page/content.php"));
 ?>
-
-<?php echo the_content() ?>
 
 <?php
 get_footer();

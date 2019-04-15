@@ -35,8 +35,12 @@ abbr, acronym {
 	cursor: help;
 }
 
-mark, ins {
+mark {
 	background: $color__background-ins;
+	text-decoration: none;
+}
+
+ins {
 	text-decoration: none;
 }
 

@@ -42,7 +42,9 @@ if ( ! empty( $tabs ) ) :
 		<ul class="nav nav-tabs" role="tablist">
 		<li class="active"><a href="#description" role="tab" data-toggle="tab">Description</a></li>
 		<li><a href="#box" role="tab" data-toggle="tab">What's in the box</a></li>
+		<?php if ($tech_intro): ?>
 		<li><a href="#tech" role="tab" data-toggle="tab">Technical Specification</a></li>
+		<?php endif; ?>
 		</ul>
 
 		<!-- Tab panes -->
@@ -82,78 +84,83 @@ if ( ! empty( $tabs ) ) :
 
 						<?php endif; ?>
 				</div>
-				<div class="col-md-8 box_image">
-					<img src="<?php echo $infoGraphic ?>" alt="<?php echo the_title(); ?>">
-				</div>
+				<?php if($infoGraphic) : ?>
+					<div class="col-md-8 box_image">
+						<img src="<?php echo $infoGraphic ?>" alt="<?php echo the_title(); ?>">
+					</div>
+				<?php endif; ?>
 			</div>
 
 		</div>
-		<div class="tab-pane" id="tech">
+
+		<?php if ($tech_intro): ?>
+			<div class="tab-pane" id="tech">
 
 
-			<div class="row">
-				<div class="col-md-12">
-					<div class="intro">
-						<?php echo $tech_intro ?>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="intro">
+							<?php echo $tech_intro ?>
+						</div>
+					</div>
+					<div class="col-md-12">
+
+
+						<?php if( have_rows('tech_table') ): ?>
+
+							<?php while( have_rows('tech_table') ): the_row();
+
+								// vars
+								$item_name = get_sub_field('item_name');
+								$item_no = get_sub_field('item_no');
+								$link_to_single_product = get_sub_field('link_to_single_product');
+
+								?>
+
+								<div class="tech_table matchheight">
+
+									<div class="item_title">
+										<?php echo $item_name ?>
+									</div>
+
+									<div class="item_no">
+										<p>item no:</p>
+										<h3><?php echo $item_no ?></h3>
+									</div>
+
+									<?php if( have_rows('item_details') ): ?>
+
+											<?php
+
+											// loop through rows (sub repeater)
+											while( have_rows('item_details') ): the_row();
+
+											$item_detail = get_sub_field('item_detail');
+
+												// display each item as a list - with a class of completed ( if completed )
+												?>
+												<div class="item_details matchitem">
+													<?php echo $item_detail; ?>
+												</div>
+											<?php endwhile; ?>
+
+
+										<?php endif; ?>
+
+								</div>
+
+							<?php endwhile; ?>
+
+						<?php endif; ?>
+
+
+
 					</div>
 				</div>
-				<div class="col-md-12">
 
 
-					<?php if( have_rows('tech_table') ): ?>
-
-						<?php while( have_rows('tech_table') ): the_row();
-
-							// vars
-							$item_name = get_sub_field('item_name');
-							$item_no = get_sub_field('item_no');
-							$link_to_single_product = get_sub_field('link_to_single_product');
-
-							?>
-
-							<div class="tech_table matchheight">
-
-								<div class="item_title">
-									<?php echo $item_name ?>
-								</div>
-
-								<div class="item_no">
-									<p>item no:</p>
-									<h3><?php echo $item_no ?></h3>
-								</div>
-
-								<?php if( have_rows('item_details') ): ?>
-
-										<?php
-
-										// loop through rows (sub repeater)
-										while( have_rows('item_details') ): the_row();
-
-										$item_detail = get_sub_field('item_detail');
-
-											// display each item as a list - with a class of completed ( if completed )
-											?>
-											<div class="item_details matchitem">
-												<?php echo $item_detail; ?>
-											</div>
-										<?php endwhile; ?>
-
-
-									<?php endif; ?>
-
-							</div>
-
-						<?php endwhile; ?>
-
-					<?php endif; ?>
-
-
-
-				</div>
 			</div>
-
-
-		</div>
+		<?php endif; ?>
 		</div>
 	</div>
 

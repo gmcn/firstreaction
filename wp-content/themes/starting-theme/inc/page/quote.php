@@ -44,6 +44,7 @@ function email_output()
 
 
 <div class="container-fluid quote">
+  
   <div class="row">
     <?php echo do_shortcode('[formidable id=3]'); ?>
   </div>

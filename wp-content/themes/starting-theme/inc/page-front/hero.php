@@ -17,16 +17,17 @@
 					// ACF Sub fields
       		$slide_image = get_sub_field('slide_image');
       		$slide_title = get_sub_field('slide_title');
+					$slide_link = get_sub_field('slide_link');
           $range_link = get_sub_field('range_link');
 					?>
 
 				<li class="slide" style="background:url(<?php echo $slide_image; ?>) center; background-size: cover">
 
-          <div class="container-fluid" style="background: url('<?php echo $slide_slanted; ?>') center center no-repeat;">
+          <div class="container-fluid" style="background: url(<?php echo get_template_directory_uri(); ?>/images/horizontal_rule.svg) center center no-repeat;">
 
             <div class="slide__title vert-align">
               <h1 class="wow fadeInLeft"><?php echo $slide_title; ?></h1><br />
-							<a class="wow fadeInRight" href="<?php echo $slide_link ?>">Order Today</a>
+							<a href="<?php echo $slide_link ?>" class="wow fadeInRight">Order Today</a>
             </div>
 
           </div>
@@ -49,5 +50,5 @@
 
 		</ul>
   <?php endif; ?>
-
+<img class="scroll animated bounce" src="<?php echo get_template_directory_uri(); ?>/images/scroll-icon.svg" alt="">
 </div>

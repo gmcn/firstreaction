@@ -1,6 +1,3 @@
-<div class="container-fluid product-info">
-
-
   <?php
 
   /*
@@ -14,6 +11,8 @@
 
 
   if( $post_objects ): ?>
+
+  <div class="container-fluid product-info">
 
       <?php $i = 1; foreach( $post_objects as $post): // variable must be called $post (IMPORTANT)
 
@@ -53,8 +52,5 @@
       <?php $i++; endforeach; ?>
 
       <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+      </div><!-- /.container-fluid product-into -->
   <?php endif; ?>
-
-
-
-</div><!-- /.container-fluid product-into -->

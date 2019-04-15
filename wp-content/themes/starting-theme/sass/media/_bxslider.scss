@@ -69,10 +69,7 @@ ul.bxslider {
   font-family: Arial;
   font-weight: bold;
   position: absolute;
-  @include lg {
-    top: 65%;
-  }
-  top: 80%;
+  bottom: 20%;
   right: 0;
   left: 0;
   color: #666;

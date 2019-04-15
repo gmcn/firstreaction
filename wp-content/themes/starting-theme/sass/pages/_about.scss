@@ -38,15 +38,15 @@
       font-size: 12px;
       color: rgba(255,255,255,.5);
       text-transform: uppercase;
-      @include md {
-        margin-right: 25px;
-      }
-      @include lg {
-        margin-right: 50px;
-      }
-      @include xl {
-        margin-right: 75px;
-      }
+      // @include md {
+      //   margin-right: 25px;
+      // }
+      // @include lg {
+      //   margin-right: 50px;
+      // }
+      // @include xl {
+      //   margin-right: 75px;
+      // }
     }
     h3.slogan {
       margin-bottom: 50px;
@@ -64,12 +64,12 @@
     h3 {
       font-size: 54px;
       font-weight: 700;
-      @include md {
-        margin-right: 25px;
-      }
-      @include lg {
-        margin-right: 75px;
-      }
+      // @include md {
+      //   margin-right: 25px;
+      // }
+      // @include lg {
+      //   margin-right: 75px;
+      // }
     }
     img.seperator {
       margin-bottom: 25px;

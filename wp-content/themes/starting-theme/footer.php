@@ -18,14 +18,16 @@
 				<div class="container-fluid footer">
 					<div class="row about">
 						<hr />
-						<div class="col-sm-5">
-							<h5>We care about the things you care about..</h5>
+						<div class="col-sm-5 footermatch">
+							<h5><?php echo the_field('footer_text_heading', 'option') ?></h5>
 							<p class="footer__description">
-								Fxercit ationem ullam corporis suscipit labor iosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in lit esse. Duam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatu.
+								<?php echo the_field('footer_text', 'option') ?>
 							</p>
 						</div><!-- /.col-md-4 -->
-						<div class="col-sm-3 col-sm-offset-4 col-lg-1 col-lg-offset-6 branding hidden-xs">
-							<a href="/"><img src="<?php echo get_template_directory_uri(); ?>/images/favicon.png" alt="<?php echo get_bloginfo();?>"></a>
+						<div class="col-sm-3 col-sm-offset-4 col-lg-1 col-lg-offset-6 branding hidden-xs footermatch">
+							<div class="vert-align">
+								<a href="/"><img src="<?php echo get_template_directory_uri(); ?>/images/favicon.png" alt="<?php echo get_bloginfo();?>"></a>
+							</div>
 						</div><!-- /.col-md-2 col-md-offset-6 -->
 						<hr />
 					</div><!-- /.row -->

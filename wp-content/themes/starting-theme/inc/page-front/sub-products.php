@@ -17,7 +17,7 @@ if( $products_list ): ?>
             <?php setup_postdata($post); ?>
             <div class="col-xs-6 col-md-3 sub-product <?php if ($i % 2): ?>wow fadeInUp <?php else : ?>wow fadeInDown<?php endif; ?>">
               <h2>
-                <a class="product" href="<?php the_permalink(); ?>">#<?php the_title(); ?></a>
+                <a class="product" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
               </h2>
               <?php echo the_post_thumbnail('medium'); ?>
               <div class="add-to-cart">

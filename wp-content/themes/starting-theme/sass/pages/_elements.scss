@@ -5,6 +5,9 @@
   font-size: 12px;
   font-weight: 300;
   text-transform: uppercase;
+  span {
+    padding: 0 5px;
+  }
   @include md {
     text-align: right;
   }
@@ -154,6 +157,10 @@
 
 .page {
   .social_main {
+    .title {
+      padding-bottom: 25px;
+      padding-top: 0;
+    }
     h3 {
       font-size: 12px;
       color: rgba(255,255,255,.5);
@@ -163,9 +170,11 @@
       font-size: 55px;
       font-weight: 700;
       color: #fff;
+      text-transform: none;
     }
     img {
       height: 48px;
+      margin-top: 15px;
     }
     background: #0E1A1A;
     margin-top: 50px;

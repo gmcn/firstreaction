@@ -4,6 +4,17 @@
   }
 }
 
+.scroll {
+  position: absolute;
+  bottom: 20px;
+  height: 90px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  animation-duration: 2s !important;
+}
+
 .slide {
   h1 {
     color: #fff;
@@ -62,6 +73,7 @@
       font-weight: 700;
     }
   }
+
 }
 .home {
   .main-products {
@@ -99,6 +111,13 @@
     }
     img.product {
       display: inline-block;
+    }
+    a {
+      color: #848484;
+      font-size: 12px;
+    }
+    a:hover {
+      color: $color__red;
     }
     a.more {
       margin-top: 25px;
@@ -166,6 +185,8 @@
 
   .intro {
     text-align: center;
+    background: url(images/about_bg.png) top center;
+    background-position: -50px;
     padding: 50px 0;
     @include md {
       padding: 100px 0;

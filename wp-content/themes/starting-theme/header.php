@@ -41,7 +41,7 @@
 						</a>
 					</h1>
 				</div><!-- /.col-md-4 .site-branding -->
-				<div class="col-xs-8 col-md-4 shop">
+				<div class="col-xs-8 col-md-4 col-lg-3 shop">
 					<?php if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) :
 						$count = WC()->cart->cart_contents_count; ?>
 							<a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>">
@@ -182,7 +182,7 @@
 
 
 				</div><!-- /.col-md-4 -->
-				<div class="col-md-4">
+				<div class="col-md-4 col-lg-5">
 					<!-- Static navbar -->
 				      <nav class="navbar navbar-default">
 				        <div class="container-fluid">

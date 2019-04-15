@@ -3,6 +3,11 @@
   color: #fff;
   padding: 40px 0 0 0;
   .content {
+    h2 {
+      font-size: 12px;
+      color: rgba(255,255,255,.5);
+      text-transform: uppercase;
+    }
     p:first-of-type {
       font-weight: 700;
     }
@@ -21,8 +26,17 @@
       font-weight: 700;
       margin-top: 15px;
     }
+    a:hover {
+      color: #fff;
+    }
   }
   .form {
+    h2 {
+      font-size: 12px;
+      color: rgba(255,255,255,.5);
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
     .frm_message {
       border: 1px solid $color__red;
       text-align: center;
@@ -39,13 +53,13 @@
       }
     }
     .wpcf7-submit, .frm_button_submit {
-      float: right;
       background: $color__red;
       color: #fff;
-      font-size: 14px;
+      font-size: 16px;
       text-transform: uppercase;
       border: 0;
-      padding: 15px 20px;
+      padding: 25px 20px;
+      width: 100%;
       border-radius: 0;
     }
     .wpcf7-submit:hover, .frm_button_submit:hover {
@@ -53,15 +67,31 @@
     }
     .form-control {
       width: 100%;
+      padding: 0;
+      input {
+        padding: 6px;
+        border: none;
+      }
+    }
+    textarea {
+      padding: 6px;
+      border: none;
+      color: #000 !important;
     }
     .consent {
       .wrapper {
         background: #fff;
         color: #000;
-        padding: 10px;
+        padding: 10px 10px 10px 25px;
+        input {
+          margin-left: -15px;
+        }
         label {
           font-weight: 300;
           font-size: 12px;
+        }
+        a:hover {
+          color: $color__red;
         }
       }
       input {
@@ -77,6 +107,10 @@
         margin-top: 20px;
         display: block;
       }
+    }
+    .frm_submit {
+      padding-bottom: 15px;
+      border-bottom: 10px solid $color__red;
     }
   }
 }
