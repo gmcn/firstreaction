@@ -420,8 +420,6 @@ textarea {
 --------------------------------------------------------------*/
 a {
   color: royalblue; }
-  a:visited {
-    color: purple; }
   a:hover, a:focus, a:active {
     color: midnightblue; }
   a:focus {
@@ -955,7 +953,9 @@ footer {
         footer .signature .policy ul li:last-of-type {
           border-right: none; }
   footer a {
-    color: pink; }
+    color: #fff; }
+  footer a:hover {
+    color: #F12A28; }
 
 /*--------------------------------------------------------------
 # Homepage
@@ -966,7 +966,6 @@ footer {
 .scroll {
   position: absolute;
   bottom: 20px;
-  height: 90px;
   left: 0;
   right: 0;
   margin-left: auto;

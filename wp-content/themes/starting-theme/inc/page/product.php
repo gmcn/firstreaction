@@ -17,6 +17,7 @@
       <?php $i = 1; foreach( $post_objects as $post): // variable must be called $post (IMPORTANT)
 
         $product_lifestyle_img = get_field('product_lifestyle_img');
+        $price = get_post_meta( get_the_ID(), '_regular_price', true);
         ?>
           <?php setup_postdata($post); ?>
 
@@ -28,7 +29,12 @@
                 </h2>
                 <?php echo the_post_thumbnail('medium'); ?>
                 <br />
-                <a href="<?php the_permalink(); ?>">Read Details</a>
+
+                <?php if (!$price) : ?>
+                  <a>Coming Soon</a>
+                <?php else : ?>
+                  <a href="<?php the_permalink(); ?>">Read Details</a>
+                <?php endif; ?>
               </div>
               <div class="col-sm-6 matchheight lifeimg wow fadeInRight" style="background: url(<?php echo $product_lifestyle_img ?>) center center; background-size: cover">
               </div>
@@ -43,7 +49,11 @@
                 </h2>
                 <?php echo the_post_thumbnail('medium'); ?>
                 <br />
-                <a href="<?php the_permalink(); ?>">Read Details</a>
+                <?php if (!$price) : ?>
+                  <a>Coming Soon</a>
+                <?php else : ?>
+                  <a href="<?php the_permalink(); ?>">Read Details</a>
+                <?php endif; ?>
               </div>
             </div>
           <?php endif; ?>

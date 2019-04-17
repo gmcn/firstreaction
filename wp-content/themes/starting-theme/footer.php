@@ -36,30 +36,25 @@
 						<div class="col-md-7">
 							<!-- <div class="row"> -->
 								<div class="footer__nav">
-									<h6>Shop</h6>
+									<h6><a href="/shop">Shop</a></h6>
 									<?php wp_nav_menu( array(
 										'theme_location' => 'footer-1' ) );
 										?>
 								</div>
 								<div class="footer__nav">
-									<h6>Product Info</h6>
-									<p>Find out more information about our products and how they work.</p>
+									<h6><a href="/product-information">Product</a></h6>
 								</div>
 								<div class="footer__nav">
-									<h6>News</h6>
-									<p>Stay up to date with us and whats new.</p>
+									<h6><a href="/news">News</a></h6>
 								</div>
 								<div class="footer__nav">
-									<h6>About</h6>
-									<p>Find out how we started and what inspires us.</p>
+									<h6><a href="/about">About</a></h6>
 								</div>
 								<div class="footer__nav">
-									<h6>Get a quote</h6>
-									<p>Have a big project… give us the details for a real quote.</p>
+									<h6><a href="/get-a-quote">Get a quote</a></h6>
 								</div>
 								<div class="footer__nav">
-									<h6>Contact</h6>
-									<p>Have more questions…let us help you.</p>
+									<h6><a href="/contact">Contact</a></h6>
 								</div>
 								<div class="footer__nav">
 									<h6>Social</h6>
