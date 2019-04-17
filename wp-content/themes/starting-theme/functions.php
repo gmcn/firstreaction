@@ -48,7 +48,6 @@ function starting_theme_setup() {
 		'fire-safety' => esc_html__( 'Fire Safety', 'starting-theme' ),
 		'health-safety' => esc_html__( 'Health Safety', 'starting-theme' ),
 		'general-safety' => esc_html__( 'General Safety', 'starting-theme' ),
-		'footer-1' => esc_html__( 'Footer 1', 'starting-theme' ),
 	) );
 
 	/*

@@ -37,9 +37,6 @@
 							<!-- <div class="row"> -->
 								<div class="footer__nav">
 									<h6><a href="/shop">Shop</a></h6>
-									<?php wp_nav_menu( array(
-										'theme_location' => 'footer-1' ) );
-										?>
 								</div>
 								<div class="footer__nav">
 									<h6><a href="/product-information">Product</a></h6>
