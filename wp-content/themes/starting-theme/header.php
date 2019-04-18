@@ -170,7 +170,7 @@
               </ul>
 				       </li>
 				     </ul>
-					</nav>
+					</nav><!-- /.yamm -->
 
 
 					<a href="https://twitter.com/FirstReactionUK" target="_blank">
@@ -207,11 +207,11 @@
 											'items_wrap' => '<ul id="" class="nav navbar-nav navbar-right">%3$s</ul>' ) );
 											?>
 				        </div><!--/.container-fluid -->
-				      </nav><!-- #site-navigation -->
+				      </nav><!-- /nav -->
 				</div><!-- /.col-md-4 -->
 			</div>
 		</div><!-- /.container-fluid -->
 
-	</header><!-- #masthead -->
+	</header><!-- /header -->
 
 	<div id="content" class="site-content">
