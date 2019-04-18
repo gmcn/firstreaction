@@ -67,7 +67,7 @@
 													<p>Main Products</p>
 													<div class="row main_products">
 														<div class="col-xs-2 col-lg-2 hidden-xs">
-															<img src="<?php echo get_template_directory_uri(); ?>/images/surface_mm.jpg" alt="Surface | Perfect for any wall space">
+															<img src="<?php echo get_template_directory_uri(); ?>/images/surface_mm.png" alt="Surface | Perfect for any wall space">
 														</div>
 														<div class="col-xs-10 col-lg-10 main_products__product">
 															<div class="left">
@@ -80,7 +80,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="row main_products">
+													<!-- <div class="row main_products">
 														<div class="col-xs-2 col-lg-2 hidden-xs">
 															<img src="<?php echo get_template_directory_uri(); ?>/images/drawer_mm.jpg" alt="Drawer | Easy to integrate in any drawer">
 														</div>
@@ -94,14 +94,14 @@
 																<a href="#">+ Shop Refill Elements</a>
 															</div>
 														</div>
-													</div>
+													</div> -->
 													<div class="row main_products">
 														<div class="col-xs-2 col-lg-2 hidden-xs">
-															<img src="<?php echo get_template_directory_uri(); ?>/images/cupboard_mm.jpg" alt="Cupboard | Excellent for cupboards">
+															<img src="<?php echo get_template_directory_uri(); ?>/images/cupboard_mm.png" alt="Cupboard | Excellent for cupboards">
 														</div>
 														<div class="col-xs-10 col-lg-10 main_products__product">
 															<div class="left">
-																<h2>#3 Cupboard</h2>
+																<h2>#2 Cupboard</h2>
 																<p>Excellent for cupboards</p>
 															</div>
 															<div class="right">
@@ -110,7 +110,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="row main_products">
+													<!-- <div class="row main_products">
 														<div class="col-xs-2 col-lg-2 hidden-xs">
 															<img src="<?php echo get_template_directory_uri(); ?>/images/verticaldrawer_mm.jpg" alt="Verticaldrawer | A slick way to be safe.">
 														</div>
@@ -124,7 +124,7 @@
 																<a href="#">+ Shop Refill Elements</a>
 															</div>
 														</div>
-													</div>
+													</div> -->
 												</div>
 											</div>
 											<div class="col-xs-6 sub">
@@ -172,15 +172,19 @@
 				     </ul>
 					</nav>
 
-					<a href="https://facebook.com" target="_blank">
-					<img class="social" src="<?php echo get_template_directory_uri(); ?>/images/fb_header.svg" alt="Follow us First Reaction on Facebook">
+
+					<a href="https://twitter.com/FirstReactionUK" target="_blank">
+						<img class="social" src="<?php echo get_template_directory_uri(); ?>/images/twitter_header.svg" alt="Follow us First Reaction on Twitter">
 					</a>
-					<a href="https://twitter.com" target="_blank">
-					<img class="social" src="<?php echo get_template_directory_uri(); ?>/images/twitter_header.svg" alt="Follow us First Reaction on Twitter">
+					<a href="https://www.facebook.com/firstreactionltd/" target="_blank">
+						<img class="social" src="<?php echo get_template_directory_uri(); ?>/images/fb_header.svg" alt="Follow us First Reaction on Facebook">
 					</a>
-
-
-
+					<a href="https://www.linkedin.com/company/12976966/"  target="_blank">
+						<img class="social" src="<?php echo get_template_directory_uri(); ?>/images/linkedin_header.svg" alt="Follow us First Reaction on Linkedin">
+					</a>
+					<a href="https://instagram.com/FirstReactionUK"  target="_blank">
+						<img class="social" src="<?php echo get_template_directory_uri(); ?>/images/instagram_header.svg" alt="Follow us First Reaction on Instagram">
+					</a>
 				</div><!-- /.col-md-4 -->
 				<div class="col-md-4 col-lg-5">
 					<!-- Static navbar -->

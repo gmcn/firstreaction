@@ -55,11 +55,17 @@
 								</div>
 								<div class="footer__nav">
 									<h6>Social</h6>
-									<a href="https://facebook.com"  target="_blank">
-									<img src="<?php echo get_template_directory_uri(); ?>/images/fb_footer.svg" alt="Follow us First Reaction on Facebook">
+									<a href="https://instagram.com/FirstReactionUK"  target="_blank">
+										<img src="<?php echo get_template_directory_uri(); ?>/images/instagram_footer.svg" alt="Follow us First Reaction on Instagram">
 									</a>
-									<a href="https://twitter.com"  target="_blank">
-									<img src="<?php echo get_template_directory_uri(); ?>/images/twitter_footer.svg" alt="Follow us First Reaction on Twitter">
+									<a href="https://www.linkedin.com/company/12976966/"  target="_blank">
+										<img src="<?php echo get_template_directory_uri(); ?>/images/linkedin_footer.svg" alt="Follow us First Reaction on Linkedin">
+									</a>
+									<a href="https://www.facebook.com/firstreactionltd/"  target="_blank">
+										<img src="<?php echo get_template_directory_uri(); ?>/images/fb_footer.svg" alt="Follow us First Reaction on Facebook">
+									</a>
+									<a href="https://twitter.com/FirstReactionUK"  target="_blank">
+										<img src="<?php echo get_template_directory_uri(); ?>/images/twitter_footer.svg" alt="Follow us First Reaction on Twitter">
 									</a>
 								</div>
 							<!-- </div> -->
@@ -92,8 +98,9 @@
 						</div><!-- /.col-md-6 -->
 						<div class="col-md-3 policy">
 							<ul>
-								<li><a href="#">Privacy Policy</a></li>
-								<li><a href="#">Cookies</a></li>
+								<li><a href="/terms-conditions">Terms & Conditions</a></li>
+								<li><a href="/privacy-policy">Privacy Policy</a></li>
+								<li><a href="/cookie-policy">Cookies</a></li>
 							</ul>
 						</div><!-- /.col-md-3 -->
 					</div><!-- /.row -->
