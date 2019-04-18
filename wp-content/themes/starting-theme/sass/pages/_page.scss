@@ -288,6 +288,7 @@
 .quote {
   background: #0E1A1A;
   color: #fff;
+  padding-bottom: 50px;
   .products {
     img {
       width: 215px;
@@ -318,7 +319,7 @@
       display: block;
       float: none;
       font-size: 11px;
-      color: rgba(255, 255, 255, .3);
+      color: rgba(255, 255, 255, .3) !important;
     }
     .total {
       font-style: 600;
