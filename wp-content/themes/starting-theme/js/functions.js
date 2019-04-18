@@ -39,3 +39,18 @@
 })
 
 } ) (jQuery);
+
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#f23735"
+    },
+    "button": {
+      "background": "#fff"
+    }
+  },
+  "content": {
+    "href": "/privacy-policy"
+  }
+})});
