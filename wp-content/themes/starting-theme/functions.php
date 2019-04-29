@@ -254,6 +254,9 @@ add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_p
 
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 10 );
 
+//woocommerce allowing shipping address to be added for virtual product
+add_filter( 'woocommerce_cart_needs_shipping_address', '__return_true', 50 );
+
 /**
  * Code to add the custom login css file to the theme
  * - file is "/login/custom-login-styles.css"
