@@ -71,12 +71,12 @@
 														</div>
 														<div class="col-xs-10 col-lg-10 main_products__product">
 															<div class="left">
-																<h2>#1 Surface</h2>
+																<h2>#1 Home</h2>
 																<p>Perfect for any wall space</p>
 															</div>
 															<div class="right">
 																<a href="/product/surface/">+ Shop Product</a>
-																<a href="#">+ Shop Refill Elements</a>
+																<a href="/product-category/single-elements/home/">+ Shop Refill Elements</a>
 															</div>
 														</div>
 													</div>
@@ -106,7 +106,7 @@
 															</div>
 															<div class="right">
 																<a href="/product/cupboard/">+ Shop Product</a>
-																<a href="#">+ Shop Refill Elements</a>
+																<a href="/product-category/single-elements/cupboard/">+ Shop Refill Elements</a>
 															</div>
 														</div>
 													</div>
@@ -141,7 +141,7 @@
 														</div>
 														<div class="col-md-4 health-safety">
 															<img src="<?php echo get_template_directory_uri(); ?>/images/health-safety.svg" alt="Health Safety">
-															<h3>Health Safety</h3>
+															<h3>Health & Safety</h3>
 															<?php wp_nav_menu( array(
 																'theme_location' => 'health-safety',
 															 ) );

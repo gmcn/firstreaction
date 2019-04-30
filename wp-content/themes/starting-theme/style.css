@@ -2503,6 +2503,8 @@ ul.included_products {
       border-bottom: 1px solid rgba(42, 68, 69, 0.3); }
       .product-single__nav__wrapper ul li {
         padding: 0 0 0 20px; }
+        .product-single__nav__wrapper ul li br {
+          display: none; }
         .product-single__nav__wrapper ul li a {
           color: #2A4445;
           font-size: 18px;

@@ -119,6 +119,9 @@ ul.included_products {
           border-bottom: 1px solid rgba(42, 68, 69, .3);
           li {
             padding: 0 0 0 20px;
+            br {
+              display: none;
+            }
             a {
               color: #2A4445;
               font-size: 18px;
