@@ -17,8 +17,8 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png">
 <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png">
-<link type="text/plain" rel="humans" href="<?php echo get_template_directory_uri(); ?>/humans.txt" />
-<link type="text/plain" rel="robots" href="<?php echo get_template_directory_uri(); ?>/robots.txt" />
+<link type="text/plain" rel="humans" href="/humans.txt" />
+<link type="text/plain" rel="robots" href="/robots.txt" />
 <?php wp_head(); ?>
 </head>
 
@@ -33,7 +33,7 @@
 	<header>
 		<div class="container-fluid">
 			<div class="row no-gutter">
-				<div class="col-xs-2 col-md-4 site-branding">
+				<div class="col-xs-2 col-md-4 col-lg-2 site-branding">
 					<h1>
 						<a href="/">
 							<img class="hidden-sm hidden-md hidden-lg" src="<?php echo get_template_directory_uri(); ?>/images/logo-mark.svg" alt="<?php bloginfo( 'name' ); ?>">
@@ -186,7 +186,7 @@
 						<img class="social" src="<?php echo get_template_directory_uri(); ?>/images/instagram_header.svg" alt="Follow us First Reaction on Instagram">
 					</a>
 				</div><!-- /.col-md-4 -->
-				<div class="col-md-4 col-lg-5">
+				<div class="col-md-4 col-lg-7">
 					<!-- Static navbar -->
 				      <nav class="navbar navbar-default">
 				        <div class="container-fluid">

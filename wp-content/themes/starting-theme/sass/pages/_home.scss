@@ -81,6 +81,7 @@
     padding-bottom: 50px;
     h2 {
       margin-top: 0;
+      line-height: .8em;
       a {
         color: $color__red;
         font-size: 20px;
@@ -360,6 +361,11 @@
         background-color: $color__green;
       }
     }
+    .price {
+      color: #000;
+      font-weight: 600;
+      font-size: 1.5em;
+    }
     .add_to_cart_button, .ajax_add_to_cart {
       margin-top: 25px;
       color: #fff;
@@ -390,7 +396,7 @@
       display: inline-block;
     }
     a.more {
-      margin-top: 25px;
+      margin-top: 50px;
       color: #fff;
       background: $color__green;
       padding: 15px 50px;

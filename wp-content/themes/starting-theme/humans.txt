@@ -1,10 +1,5 @@
 /* TEAM */
 
-  Project Manager: Sharon Williamson
-  Contact: Sharon [at] ourface.co.uk
-  Website: https://www.cornellstudios.com
-  From: Portadown, Northern Ireland
-
   Web Designer: Ed Jones
   Contact: ed [at] cornellstudios.com
   Website: https://www.cornellstudios.com
@@ -19,6 +14,6 @@
 
 /* SITE */
 
-  Last update: xx/xx/xx
+  Last update: 03/05/19
   Doctype: HTML5
   IDE: Atom, FileZilla, Adobe XD, Wordpress, Bootstrap, SASS, matchheight.js, bxslider.js, fancybox.js

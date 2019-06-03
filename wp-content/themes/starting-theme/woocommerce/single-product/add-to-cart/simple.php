@@ -49,6 +49,12 @@ if ( $product->is_in_stock() ) : ?>
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 	</form>
 
+	<?php if ( has_term( 'first-reaction', 'product_cat' ) ) : ?>
+		<div class="quote">
+		Buying in bulk (3 or more), <a href="/get-a-quote">get in touch for a quote</a>
+		</div>
+	<?php endif; ?>
+
 	<?php $refillProducts = get_field('refill_products'); ?>
 
 	<?php if ($refillProducts) : ?>

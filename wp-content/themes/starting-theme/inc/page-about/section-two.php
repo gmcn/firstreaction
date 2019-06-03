@@ -3,12 +3,15 @@
   $content_section_2_img_separator = get_field('content_section_2_img_seperator');
   $content_section_2_heading = get_field('content_section_2_heading');
   $content_section_2_copy = get_field('content_section_2_copy');
+  $content_section_2_bg_colour = get_field('content_section_2_bg_colour');
 
  ?>
 
+ <?php if($content_section_2_img_separator) : ?>
+
 <div class="section-two">
 
-  <section class="stripe" style="background: #F12A28 url(<?php echo $content_section_2_img_separator ?>) fixed center center no-repeat">
+  <section class="stripe" style="background: <?php echo $content_section_2_bg_colour ?> url(<?php echo $content_section_2_img_separator ?>) fixed center center no-repeat">
     <div class="stripe__content">
     </div>
   </section>
@@ -28,3 +31,5 @@
   </div>
 
 </div>
+
+<?php endif; ?>

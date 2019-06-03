@@ -27,8 +27,8 @@
           <div class="container-fluid" style="background: url(<?php echo get_template_directory_uri(); ?>/images/horizontal_rule.svg) center center no-repeat;">
 
             <div class="slide__title vert-align">
-              <h1 class="wow fadeInLeft"><?php echo $slide_title; ?></h1><br />
-							<a href="<?php echo $slide_link ?>" class="wow fadeInRight"><?php echo $slide_cta_text ?></a>
+              <h1 class="wow fadeInLeft" data-wow-delay="5s"><?php echo $slide_title; ?></h1><br />
+							<a href="<?php echo $slide_link ?>" class="wow fadeInRight" data-wow-duration="3s" data-wow-delay="5.5s"><?php echo $slide_cta_text ?></a>
             </div>
 
           </div>

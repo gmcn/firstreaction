@@ -1,9 +1,10 @@
 ( function($) {
 
   $('.bxslider').bxSlider({
-  // auto: false,
+  auto: true,
   // autoStart: true,
-  // speed: 1000,
+  speed: 1000,
+  pause: 10000,
   // autoControls: false,
   // stopAutoOnClick: false,
   // pager: false,
@@ -54,3 +55,20 @@ window.cookieconsent.initialise({
     "href": "/privacy-policy"
   }
 })});
+
+$(function() {//arg c is not used
+
+$('.input-text').on('keyup change', function() {//c is event object and is not used
+//note that 'c' from outer function is not 'c' in inner function
+//no need to re-request #check
+var one = $(this);//$('#check');
+$('.quote').hide();//all in one
+if( (one.val() > 2) ) {
+        $('.quote').show();
+        //optionnaly
+        return;
+    }
+
+});
+
+});

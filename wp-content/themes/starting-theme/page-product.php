@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: About Page
+ * Template Name: Single Product Page
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -19,7 +19,6 @@ include(locate_template("inc/page-elements/breadcrumbs.php"));
 include(locate_template("inc/page-about/main.php"));
 include(locate_template("inc/page-about/section-one.php"));
 include(locate_template("inc/page-about/section-two.php"));
-include(locate_template("inc/page-about/team.php"));
 include(locate_template("inc/page-about/contact.php"));
 ?>
 

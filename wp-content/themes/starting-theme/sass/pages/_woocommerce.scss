@@ -234,6 +234,24 @@ ul.included_products {
   button.button:hover {
     background: $color__green !important;
   }
+
+  .quote {
+    background: $color__red;
+    color: #fff;
+    padding: 20px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    display: none;
+    a {
+      color: #fff;
+      font-weight: 600;
+      transition: .5;
+    }
+    a:hover {
+      color: #000;
+    }
+  }
+
   a.refills {
     background: $color__green;
     color: #fff;

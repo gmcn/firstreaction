@@ -15,16 +15,23 @@
         <div class="row">
         <?php $i = 1; foreach( $post_objects as $post): // variable must be called $post (IMPORTANT)
           $refillProducts = get_field('refill_products');
+          $price = get_post_meta( get_the_ID(), '_regular_price', true);
           ?>
             <?php setup_postdata($post); ?>
             <div class="col-xs-6 col-md-3 matchheight <?php if ($i % 2): ?>wow fadeInDown <?php else : ?>wow fadeInUp<?php endif; ?>">
               <h2>
-                <a class="product" href="<?php the_permalink(); ?>">#<?php the_title(); ?></a>
+                <?php if (!$price) : ?>
+                  <a class="product"><?php the_title(); ?></a>
+                <?php else : ?>
+                  <a class="product" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                <?php endif; ?>
               </h2>
               <?php echo the_post_thumbnail('medium'); ?>
               <br>
               <img class="seperator" src="<?php echo get_template_directory_uri() ?>/images/product_bottom.svg" alt="<?php the_title(); ?>"><br  />
-              <?php if ($refillProducts): ?>
+              <?php if (!$price) : ?>
+                <a>COMING SOON</a>
+              <?php elseif ($refillProducts): ?>
                 <a href="<?php echo $refillProducts ?>">+ VIEW ITEM REFILLS </a>
               <?php endif; ?>
             </div>

@@ -135,6 +135,11 @@
         margin-bottom: 50px;
       }
     }
+    .prod_img {
+      @include lg {
+        margin-top: -100px;
+      }
+    }
   }
 }
 
@@ -219,5 +224,108 @@
   }
   &_member:nth-child(3n+3) {
     border-right: none;
+  }
+}
+.product_form_top {
+  height: 255px;
+  background: url(images/product_form_before.svg) bottom left no-repeat;
+}
+.product_form {
+  background: #0E1A1A;
+  color: #fff;
+  padding: 50px 0;
+  p:first-of-type {
+    font-weight: 700;
+  }
+  a {
+    font-weight: 700;
+    color: $color__red;
+  }
+  a:hover {
+    color: #fff;
+  }
+  h2 {
+    font-size: 12px;
+    color: rgba(255,255,255,.5);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+  .form {
+    .frm_message {
+      border: 1px solid $color__red;
+      text-align: center;
+      color: $color__red;
+      padding: 150px 10%;
+      h2 {
+        font-size: 60px;
+        text-transform: uppercase;
+        color: $color__red;
+      }
+      p {
+        color: $color__red;
+        font-size: 13px;
+      }
+    }
+    .wpcf7-submit, .frm_button_submit {
+      background: $color__red;
+      color: #fff;
+      font-size: 16px;
+      text-transform: uppercase;
+      border: 0;
+      padding: 25px 20px;
+      width: 100%;
+      border-radius: 0;
+    }
+    .wpcf7-submit:hover, .frm_button_submit:hover {
+      background: $color__green;
+    }
+    .form-control {
+      width: 100%;
+      padding: 0;
+      input {
+        padding: 6px;
+        border: none;
+      }
+    }
+    textarea {
+      padding: 6px;
+      border: none;
+      color: #000 !important;
+    }
+    .consent {
+      .wrapper {
+        background: #fff;
+        color: #000;
+        padding: 10px 10px 10px 25px;
+        input {
+          margin-left: -15px;
+        }
+        label {
+          font-weight: 300;
+          font-size: 12px;
+        }
+        a:hover {
+
+          color: $color__red;
+        }
+      }
+      input {
+        // margin-right: 10px;
+      }
+      .wpcf7-list-item-label {
+        font-size: 12px;
+      }
+      a {
+        color: $color__grey;
+        font-size: 14px;
+        font-weight: 700;
+        margin-top: 20px;
+        display: block;
+      }
+    }
+    .frm_submit {
+      padding-bottom: 15px;
+      border-bottom: 10px solid $color__red;
+    }
   }
 }

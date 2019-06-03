@@ -94,6 +94,14 @@ function starting_theme_add_woocommerce_support() {
 }
 add_action( 'after_setup_theme', 'starting_theme_add_woocommerce_support' );
 
+add_filter( 'woocommerce_get_image_size_gallery_thumbnail', function( $size ) {
+    return array(
+        'width'  => 200,
+        'height' => 200,
+        'crop'   => 1,
+    );
+} );
+
 /**
  * Register widget area.
  *

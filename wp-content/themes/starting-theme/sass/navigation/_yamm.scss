@@ -66,6 +66,11 @@
     @include md {
       padding: 50px 30px;
     }
+    .sub {
+      img {
+        height: 32px;
+      }
+    }
     .main, .sub {
       p {
         border-bottom: 2px solid rgba($color__grey,.3);

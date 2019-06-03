@@ -11,7 +11,7 @@
         <div class="wrapper matchheight">
           <a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo the_title(); ?>">
 
-            <img src="<?php echo get_the_post_thumbnail_url($loop->post->ID, 'large') ?>" alt="">
+            <img src="<?php echo get_the_post_thumbnail_url($loop->post->ID, 'large') ?>" alt="<?php echo the_title(); ?>">
 
 
           	<?php
@@ -23,7 +23,6 @@
             	?>
               <?php woocommerce_template_loop_add_to_cart( $loop->post, $product ); ?>
               <div class="clear">
-
               </div>
           </a>
         </div>

@@ -20,6 +20,8 @@ if( $products_list ): ?>
                 <a class="product" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
               </h2>
               <?php echo the_post_thumbnail('medium'); ?>
+              <?php $price = get_post_meta( get_the_ID(), '_price', true ); ?>
+              <p class="price"><?php echo wc_price( $price ); ?></p>
               <div class="add-to-cart">
                 <?php echo sprintf( '<a href="%s" data-quantity="1" class="%s" %s>+ %s</a>',
                 esc_url( $product->add_to_cart_url() ),
