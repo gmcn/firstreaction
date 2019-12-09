@@ -5,6 +5,7 @@
   // autoStart: true,
   speed: 1000,
   pause: 10000,
+  touchEnabled: false,
   // autoControls: false,
   // stopAutoOnClick: false,
   // pager: false,

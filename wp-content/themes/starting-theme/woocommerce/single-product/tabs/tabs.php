@@ -32,6 +32,7 @@ if ( ! empty( $tabs ) ) :
 
 	$box_intro = get_field('box_intro');
 	$infoGraphic = get_field('info_graphic');
+
 	$tech_intro = get_field('tech_intro');
 
 	?>
@@ -40,9 +41,7 @@ if ( ! empty( $tabs ) ) :
 		<!-- Nav tabs -->
 		<ul class="nav nav-tabs" role="tablist">
 		<li class="active"><a href="#description" role="tab" data-toggle="tab">Description</a></li>
-		<?php if ($box_intro): ?>
 		<li><a href="#box" role="tab" data-toggle="tab">What's in the box</a></li>
-		<?php endif; ?>
 		<?php if ($tech_intro): ?>
 		<li><a href="#tech" role="tab" data-toggle="tab">Technical Specification</a></li>
 		<?php endif; ?>
@@ -51,50 +50,49 @@ if ( ! empty( $tabs ) ) :
 		<!-- Tab panes -->
 		<div class="tab-content">
 		<div class="tab-pane active" id="description"><?php echo the_content(); ?></div>
-		<?php if ($box_intro): ?>
-			<div class="tab-pane" id="box">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="intro">
-							<?php echo $box_intro ?>
-						</div>
+		<div class="tab-pane" id="box">
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="intro">
+						<?php echo $box_intro ?>
 					</div>
-					<div class="col-md-4">
-						<?php if( have_rows('box_contents') ): ?>
-
-								<ul class="included_products">
-
-									Contents
-
-									<?php $i = 1; while( have_rows('box_contents') ): the_row();
-
-										// vars
-										$boxContentsName = get_sub_field('box_contents_name');
-
-										?>
-
-										<li>
-
-											#<?php echo $i; ?> <?php echo $boxContentsName ?>
-
-										</li>
-
-									<?php $i++; endwhile; ?>
-
-								</ul>
-
-							<?php endif; ?>
-					</div>
-					<?php endif; ?>
-					<?php if($infoGraphic) : ?>
-						<div class="col-md-8 box_image">
-							<img src="<?php echo $infoGraphic ?>" alt="<?php echo the_title(); ?>">
-						</div>
-
 				</div>
+				<div class="col-md-4">
+					<?php if( have_rows('box_contents') ): ?>
 
+							<ul class="included_products">
+
+								Contents
+
+								<?php $i = 1; while( have_rows('box_contents') ): the_row();
+
+									// vars
+									$boxContentsName = get_sub_field('box_contents_name');
+
+									?>
+
+									<li>
+
+										#<?php echo $i; ?> <?php echo $boxContentsName ?>
+
+									</li>
+
+								<?php $i++; endwhile; ?>
+
+							</ul>
+
+						<?php endif; ?>
+				</div>
+				<?php if($infoGraphic) : ?>
+					<div class="col-md-8 box_image">
+						<img src="<?php echo $infoGraphic ?>" alt="<?php echo the_title(); ?>">
+					</div>
+				<?php endif; ?>
 			</div>
-		<?php endif; ?>
+
+		</div>
+
 		<?php if ($tech_intro): ?>
 			<div class="tab-pane" id="tech">
 

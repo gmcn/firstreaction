@@ -16,34 +16,23 @@
 			<?php while(have_rows('slider')) : the_row();
 					// ACF Sub fields
       		$slide_image = get_sub_field('slide_image');
+					$slide_align = get_sub_field('slide_image_align');
       		$slide_title = get_sub_field('slide_title');
 					$slide_link = get_sub_field('slide_link');
           $range_link = get_sub_field('range_link');
 					$slide_cta_text = get_sub_field('slide_cta_text');
 					?>
 
-				<li class="slide" style="background:url(<?php echo $slide_image; ?>) center; background-size: cover">
+				<li class="slide" style="background:url(<?php echo $slide_image; ?>) center <?php echo $slide_align; ?>; background-size: cover">
 
           <div class="container-fluid" style="background: url(<?php echo get_template_directory_uri(); ?>/images/horizontal_rule.svg) center center no-repeat;">
 
             <div class="slide__title vert-align">
               <h1 class="wow fadeInLeft" data-wow-delay="5s"><?php echo $slide_title; ?></h1><br />
-							<a href="<?php echo $slide_link ?>" class="wow fadeInRight" data-wow-duration="3s" data-wow-delay="5.5s"><?php echo $slide_cta_text ?></a>
+							<a href="<?php echo $slide_link ?>" class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="5.5s"><?php echo $slide_cta_text ?></a>
             </div>
 
           </div>
-
-          <?php if ($slide_project_title): ?>
-
-            <div class="container slide-project__title">
-              <span><?php echo $slide_project_title; ?></span>
-              <?php if ($slide_project_link): ?>
-                <a style="color: <?php echo $slide_title_colour ?>" href="<?php echo $slide_project_link ?>"> VIEW MORE</a>
-              <?php endif; ?>
-
-            </div>
-
-          <?php endif; ?>
 
 				</li>
 

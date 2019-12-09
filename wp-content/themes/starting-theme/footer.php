@@ -29,6 +29,7 @@
 								<a href="/"><img src="<?php echo get_template_directory_uri(); ?>/images/favicon.png" alt="<?php echo get_bloginfo();?>"></a>
 							</div>
 						</div><!-- /.col-md-2 col-md-offset-6 -->
+						<div style="clear: both;"> </div>
 						<hr />
 					</div><!-- /.row -->
 
@@ -69,6 +70,9 @@
 									</a>
 								</div>
 							<!-- </div> -->
+							<div style="clear: both;">
+
+							</div>
 						</div><!-- /.col-md-7 -->
 						<div class="col-md-1 col-md-offset-4 footer__basket">
 							<h6>Basket</h6>
